@@ -1,0 +1,85 @@
+*{
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 253, 245);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* navigation */
+.navigation{
+    background-color: wheat;
+    width: 45px;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    transition: 0.2s ease-out;
+    border-radius: 20px;
+}
+
+.navigation .tab{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+.tab .text{
+    font-size: 0.7em;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+}
+
+.navigation:hover{
+    width: 150px;
+}
+
+.tab:hover{
+    background-color: rgb(194, 190, 190);
+    color: white;
+}
+
+/* navigation */
+
+/* display */
+
+.container .display{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(231, 149, 40);
+}
+
+.display #topic{
+    width: fit-content;
+    background-color: white;
+    padding: 20px;
+
+}
+
+.display #topic:empty{
+    display: none;
+}
