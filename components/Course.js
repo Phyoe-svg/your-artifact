@@ -1,7 +1,7 @@
-const Course = ({ id, imgURL, title, aurthor,  info, rating, level }) => {
+const Course = ({ id, course_id, imgURL, title, aurthor,  info, rating, level }) => {
   console.log(imgURL);
   return `<div class="card">
-  <a href="/${aurthor}">
+  <a href="/${course_id}">
   <div class="image" id="${id}">
       <img src="${imgURL}" alt="" srcset="">
   </div>
