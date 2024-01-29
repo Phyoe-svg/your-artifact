@@ -42,7 +42,6 @@ html, body{
     height: 50px;
     border: 1px solid white;
     border-radius: 50%;
-    /*margin-right: 20px;*/
     overflow: hidden;
 }
 
@@ -79,6 +78,7 @@ html, body{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
+    transition: 0.3s ease-in;
     margin: 10px auto;
 }
 
@@ -110,6 +110,7 @@ html, body{
 .nav .nav-items .item:hover{
     background-color: var(--primary-color-dark);
     cursor: pointer;
+    box-shadow: 0px 10px 10px;
     transform: scale(1.05);
 }
 /* navigation */
@@ -121,18 +122,6 @@ html, body{
     background-color: var(--display-light);
 }
 
-.display div{
-    width: 100%;
-    height: 100%;
-    color: black;
-    font-size: 2em;
-    /* text-align: center; */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    /* background-color: red; */
-}
 
 .display .display-data{
     display: none;
@@ -143,8 +132,83 @@ html, body{
     background-color: rgb(223, 201, 201);
 }
 .display #display-courses{
-    background-color: rgb(5, 4, 4);
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(92, 53, 53);
+    overflow-y: scroll;
+    text-align: center;
 }
+
+#display-courses .card{
+    width: 250px;
+    display: inline-block;
+    height: 400px;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 10px white;
+    background-color: var(--brown);
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.3s ease-in;
+    margin: 20px;
+}
+
+.card .image{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card .image img{
+    width: 100%;
+}
+
+.card .title{
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.card .info{
+    color: wheat;
+    text-align: justify;
+    padding: 10px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.card .rating{
+    color: white;
+    position: relative;
+    top: 25px;
+    left: -60px;
+    font-weight: bold;
+    text-shadow: 0 0 5px;
+}
+.rating::before{
+    content: "Rate - ";
+}
+
+.card .course-level{
+    color: white;
+    position: relative;
+    top: 10px;
+    left: 60px;
+    font-size: 0.8em;
+    text-shadow: 0 0 10px;
+}
+
+.course-level::before{
+    content: "Level - ";
+}
+
+.card:hover{
+    box-shadow: 0 0 50px white;
+    transform: scale(1.1);
+}
+
+/* courses */
+
 .display #display-quiz{
     background-color: rgb(151, 52, 52);
 }
