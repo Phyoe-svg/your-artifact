@@ -29,6 +29,8 @@ html, body{
     color: white;
     height: 100%;
     padding: 10px;
+    width: 80px;
+    transition: 0.3s ease-in;
 }
 
 .nav .profile{
@@ -68,7 +70,9 @@ html, body{
     color: wheat;
 }
 
-
+.nav:hover{
+    width: 300px;
+}
 .nav .nav-items{
     margin: 20px auto;
 }
