@@ -1,0 +1,105 @@
+*{
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body{
+    height: 100%;
+    background-color: wheat;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.container .back{
+    margin-bottom: 20px;
+}
+
+.container .back a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1em;
+    color: black;
+}
+
+.container h2{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.container .lessons{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.lessons .lesson{
+    border: 1px solid grey;
+    width: 40%;
+    height: 110px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+
+.lesson .progress{
+    background-color: gray;
+    width: fit-content;
+    margin: 0;
+    position: relative;
+    top: -20px;
+    padding: 0px 10px 0 10px;
+    border-radius: 20px;
+}
+
+.lesson .progress:empty{
+    display: none;
+}
+
+.lesson .video{
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    display: none;
+}
+
+.video .video-frame{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.lesson .title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.lesson .description{
+    display: none;
+    padding: 10px;
+    font-family: monospace;
+}
+
+.lesson button{
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    background-color: rgb(94, 91, 86);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    color: wheat;
+    background-color: rgb(75, 64, 64);
+}

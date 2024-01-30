@@ -32,7 +32,9 @@ const courses = [
       level: "Beginner"
     },
   ];
+// add course to course section
 const display_course = document.querySelector(".display #display-courses");
 courses.forEach( course =>{
   display_course.innerHTML += Course(course);
 })
+
