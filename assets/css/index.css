@@ -134,14 +134,90 @@ html, body{
 }
 
 .display #display-home{
-    background-color: rgb(223, 201, 201);
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
 }
+
+#display-home .dashboard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .status{
+    width: 100%;
+    /* height: 50%; */
+    padding: 30px;
+    background-color: rgb(217, 205, 205);
+}
+
+.dashboard .status h1{
+    width: 100%;
+    font-family: cursive;
+    padding: 20px;
+}
+
+.status .progress{
+    width: 30%;
+    /* background-color: red; */
+    margin-left: 0;
+    display: flex;
+    margin: 20px;
+}
+
+.progress .label{
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(82, 67, 39);
+}
+
+.progress .track{
+    margin-right: 0;
+}
+
+
+.dashboard .news{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(166, 169, 170);
+}
+
+.news .info{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.news .info .new-info{
+    border: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+
+@media screen and (max-width: 600px){
+    .status .progress{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .progress .label{
+        font-size: 1em;
+        font-weight: bold;
+    }
+}
+
+/* home */
 .display #display-courses{
     padding: 10px;
     width: 100%;
     height: 100%;
     background-color: var(--display-light);
     overflow-y: scroll;
+    scroll-behavior: smooth;
     text-align: center;
 }
 

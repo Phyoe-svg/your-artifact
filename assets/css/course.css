@@ -48,6 +48,18 @@ html, body{
     border-radius: 20px;
 }
 
+@media screen and (max-width: 600px){
+    .container .lessons{
+        width: 100%;
+        /* background-color: red; */
+        display: block;
+    }
+
+    .lessons .lesson{
+        width: 90%; 
+    }
+}
+
 .lesson .progress{
     background-color: gray;
     width: fit-content;
