@@ -184,7 +184,7 @@ html, body{
 
 .details {
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
     display: flex;
 }
 
@@ -237,33 +237,50 @@ html, body{
 
 .results .result-detail{
     width: 100%;
+    border-bottom: 2px solid var(--color-dark);
+    margin-bottom: 10px;
 }
 
 .results .my-courses{
     display: flex;
+    width: 100%;
     flex-direction: column;
-    overflow-x: scroll;
-}
-
-.results .my-courses h2{
-    color: var(--color-dark);
 }
 
 .my-courses .head{
     display: flex;
+    width: 100%;
 }
 
-.my-courses .courses{
-    display: flex;
-    flex-direction: row;
-    
+.head h2{
+    width: 80%;
 }
 
-.my-courses .courses .course{
-    width: 200px;
+.head .see-all{
+    width: fit-content;
+    cursor: pointer;
+}
+
+.see-all:hover{
+    color: white;
+}
+
+.courses{
+    width: 100%;
+    text-align: center;
+    /* margin: 20px auto; */
 }
 
 
+.courses .course{
+    display: inline-block;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--primary-light);
+    background-color: var(--primary-light);
+}
 
 .details .schedule {
     width: 40%;
@@ -284,9 +301,46 @@ html, body{
 
 
 @media screen and (max-width: 600px) {
+    .display #display-home{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    #display-home .dashboard{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .dashboard .welcome{
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
     .welcome .text {
         font-size: 0.8em;
-        width: 70%;
+        width: 100%;
+        padding: 0;
+        margin: 10px auto;
+        
+    }
+    .welcome .profile{
+        display: none;
+    }
+    .details{
+        display: block;
+    }
+    .details .results{
+        width: 100%;
+    }
+
+    .results .result label{
+        font-size: 0.8em;
+    }
+
+    .details  .schedule{
+        width: 100%;
+        margin: 10px auto;
     }
 }
 
@@ -299,6 +353,16 @@ html, body{
     overflow-y: scroll;
     scroll-behavior: smooth;
     text-align: center;
+}
+
+.search{
+    width: 60%;
+}
+.search input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-light);
+    border-radius: 20px;
 }
 
 #display-courses .card{
@@ -366,7 +430,7 @@ html, body{
 
 .card:hover{
     box-shadow: 0 0 50px white;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* courses */

@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: auto;
-            width: fit-content;
-            box-sizing: border-box;
-            color: rgb(53, 48, 48);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
-
-
-    </style>
 </head>
-
 <body>
+    <input type="search" id="search">
+    <script>
+        const datas = [
+        {
+            title: "JavaScript",
+            href: "joker"
+        },
+        {
+            title: "Python",
+            href: "kolo"
+        },
+        {
+            title: "C",
+            href: "c.org"
+        }
+        ]
 
+        const search = document.getElementById("search");
+        search.addEventListener("input", (e)=>{
+            let search_datas = datas.filter(
+                data => {
+                    if(data.title.toLocaleLowerCase().startsWith(search.value)){
+                        return data;
+                    }
+                }
+            )
+            console.log(search_datas);
+        })
+    </script>
 </body>
-
 </html>
