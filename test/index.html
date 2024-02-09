@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="search" id="search">
+  </head>
+  <body>
+    <div class="search">
+        <input type="search" id="search" placeholder="search">
+    </div>
     <script>
-        const datas = [
+      const courses = [
         {
-            title: "JavaScript",
-            href: "joker"
+          id: 0,
+          course_id: 0,
+          imgURL: "../assets/icons/94a65614997aeace.jfif",
+          title: "JavaScript",
+          aurthor: "David J Martin",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+          rating: 0.0,
+          level: "Beginner",
         },
         {
-            title: "Python",
-            href: "kolo"
+          id: 1,
+          course_id: 0,
+          imgURL: "../assets/icons/94a65614997aeace.jfif",
+          title: "JavaScript",
+          aurthor: "David J Martin",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+          rating: 0.0,
+          level: "Beginner",
         },
         {
-            title: "C",
-            href: "c.org"
-        }
-        ]
-
+          id: 2,
+          course_id: 0,
+          imgURL: "../assets/icons/94a65614997aeace.jfif",
+          title: "JavaScript",
+          aurthor: "David J Martin",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+          rating: 0.0,
+          level: "Beginner",
+        },
+        {
+          id: 0,
+          course_id: 0,
+          imgURL: "../assets/icons/94a65614997aeace.jfif",
+          title: "Python",
+          aurthor: "David J Martin",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+          rating: 0.0,
+          level: "Beginner",
+        },
+        {
+          id: 0,
+          course_id: 0,
+          imgURL: "../assets/icons/94a65614997aeace.jfif",
+          title: "C",
+          aurthor: "David J Martin",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+          rating: 0.0,
+          level: "Beginner",
+        },
+        {
+          id: 0,
+          course_id: 0,
+          imgURL: "../assets/icons/94a65614997aeace.jfif",
+          title: "C",
+          aurthor: "David J Martin",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+          rating: 0.0,
+          level: "Beginner",
+        },
+      ];
         const search = document.getElementById("search");
+
         search.addEventListener("input", (e)=>{
-            let search_datas = datas.filter(
-                data => {
-                    if(data.title.toLocaleLowerCase().startsWith(search.value)){
-                        return data;
-                    }
-                }
-            )
-            console.log(search_datas);
+            
         })
     </script>
-</body>
+  </body>
 </html>
