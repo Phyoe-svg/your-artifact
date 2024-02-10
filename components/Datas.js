@@ -64,10 +64,6 @@ const courses = [
 ];
 
 // add course to course section
-const display_course = document.querySelector(
-  ".display #display-courses .courses"
-);
-
 const all_courses = document.querySelector(".all-courses");
 // const searched_list = document.querySelector(".searched-list");
 const search = document.getElementById("search");

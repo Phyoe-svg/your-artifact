@@ -8,10 +8,15 @@ const Course = ({
   rating,
   level,
 }) => {
-  console.log(imgURL);
   const card = document.createElement("div");
   card.className = "card";
   card.id = course_id;
+  // redirect to course page with associate data id and show 
+  card.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.setItem("course_id", course_id);
+    window.location.href = "./course.html";
+  });
   card.innerHTML = `<div class="image" id="${id}">
   <img src="${imgURL}" alt="" srcset="">
 </div>
