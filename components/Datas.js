@@ -74,7 +74,7 @@ courses.forEach( course => {
 
 search.addEventListener("input", (e)=>{
   let matched_list = courses.filter( course =>{
-    if( course.title.toLowerCase().startsWith(search.value)){
+    if( course.title.toLowerCase().includes(search.value)){
       return course;
     }
   })
