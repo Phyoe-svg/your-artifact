@@ -5,39 +5,47 @@ const lesson_view = document.getElementById("lessons");
 
 // show lessons
 Datas.forEach((data) => {
-  lesson_view.innerHTML += Lesson(data);
+  lesson_view.appendChild(Lesson(data));
 });
 
-const video = document.getElementById("video");
-const description = document.getElementById("desc");
 const lessons = document.querySelectorAll(".lessons .lesson");
 
 // interaction on lesson view
 lessons.forEach((lesson) => {
-  console.log(lesson.childNodes);
-  lesson.childNodes[9].addEventListener("click", (e) => {
-    if (lesson.childNodes[7].style.display === "block") {
-      lesson.childNodes[7].style.display = "none";
+  lesson.childNodes[8].addEventListener("click", (e) => {
+    if (lesson.childNodes[6].style.display === "block") {
+      lesson.childNodes[6].style.display = "none";
     } else {
-      lesson.childNodes[7].style.display = "block";
+      lesson.childNodes[6].style.display = "block";
       lesson.style.height = "fit-content";
     }
   });
 
-  lesson.childNodes[11].addEventListener("click", (e) => {
-    if (lesson.childNodes[3].style.display === "block") {
-      lesson.childNodes[3].style.display = "none";
+  lesson.childNodes[10].addEventListener("click", (e) => {
+    if (lesson.childNodes[2].style.display === "block") {
+      lesson.childNodes[2].style.display = "none";
     } else {
-      if (lesson.childNodes[1].innerHTML === "Progress") {
-        lesson.childNodes[3].style.display = "block";
+      if (lesson.childNodes[0].innerHTML === "Progress") {
+        lesson.childNodes[2].style.display = "block";
         lesson.style.height = "fit-content";
-      }else{
+      } else {
         alert("Finish previous lesson first");
       }
     }
   });
 
-//   lesson.childNodes[13].addEventListener("click", (e)=>{
-//     lesson.childNodes[1]
-//   })
+  lesson.childNodes[12].addEventListener("click", (e) => {
+    const finish_index = Datas.findIndex(
+      (data) => data.id === Number(lesson.id)
+    ) + 1;
+    if (finish_index !== Datas.length) {
+       Datas[finish_index].progress = true;
+       Datas[finish_index].finish = true;
+       if( Datas[finish_index].progress === true && Datas[finish_index].finish === true){
+        lesson.childNodes[12].disabled = true;
+       }
+    }else{
+      alert("Finished All Lessons");
+    }
+  });
 });

@@ -65,6 +65,8 @@ html, body{
     width: fit-content;
     margin: 0;
     position: relative;
+    color: white;
+    font-weight: bold;
     top: -20px;
     padding: 0px 10px 0 10px;
     border-radius: 20px;
@@ -108,6 +110,11 @@ html, body{
     font-weight: bold;
     cursor: pointer;
     margin: 10px;
+}
+
+.disabled{
+    background-color: white;
+    color: brown;
 }
 
 button:hover{
