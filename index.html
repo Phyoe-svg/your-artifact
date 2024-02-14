@@ -12,14 +12,15 @@
         <div class="profile">
           <div class="image">
             <img
-              src="../assets/icons/94a65614997aeace.jfif"
+              src=""
               alt="profile"
               srcset=""
-            />
+              id="profile"
+              />
           </div>
           <div class="detail">
-            <div class="name">DomAK</div>
-            <small class="email">domak@gmail.com</small>
+            <div class="name" id="username"></div>
+            <small class="email" id="email"></small>
           </div>
         </div>
         <!-- profile -->
@@ -66,13 +67,14 @@
           <div class="dashboard">
             <div class="welcome">
               <div class="text">
-                Welcome back Dom, <small>Continue your progress</small>
+                Welcome back <span id="welcome-username"></span>, <small>Continue your progress</small>
               </div>
               <div class="profile">
                 <img
-                  src="../assets/icons/94a65614997aeace.jfif"
+                  src=""
                   alt="profile"
                   srcset=""
+                  id="welcome-profile"
                 />
               </div>
             </div>
@@ -80,52 +82,26 @@
 
             <div class="details">
               <div class="results">
-                <div class="result-detail">
+                <div class="result-detail" id="result-detail">
                   <div class="result-option">
                     <h2>Results</h2>
                     <div class="full-result">Full results -></div>
                   </div>
-
-                  <div class="result">
-                    <label for="progress">Python</label>
-                    <progress value="70" max="100"></progress>70%
-                  </div>
-                  <div class="result">
-                    <label for="progress">Python</label>
-                    <progress value="70" max="100"></progress>70%
-                  </div>
-                  <div class="result">
-                    <label for="progress">Python</label>
-                    <progress value="70" max="100"></progress>70%
-                  </div>
-                  <div class="result">
-                    <label for="progress">Python</label>
-                    <progress value="70" max="100"></progress>70%
-                  </div>
+                  <!-- result -->
                 </div>
+
+                <!-- result-details  -->
+                <div class="br-line"></div>
 
                 <div class="my-courses">
                   <div class="head">
                     <h2>My Courses</h2>
                     <div class="see-all">All -></div>
                   </div>
-                  <div class="courses">
-                    <div class="course">
-                      <div class="content">Python</div>
-                    </div>
-
-                    <div class="course">
-                      <div class="content">JavaScript</div>
-                    </div>
-
-                    <div class="course">
-                      <div class="content">C</div>
-                    </div>
-
-                    <div class="course">
-                      <div class="content">C++</div>
-                    </div>
+                  <div class="courses" id="my-courses">
+                    <!-- data in User.js -->
                   </div>
+                <!-- my courses -->
                 </div>
               </div>
 

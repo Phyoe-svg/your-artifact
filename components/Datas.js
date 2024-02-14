@@ -65,7 +65,6 @@ const courses = [
 
 // add course to course section
 const all_courses = document.querySelector(".all-courses");
-// const searched_list = document.querySelector(".searched-list");
 const search = document.getElementById("search");
 
 courses.forEach( course => {

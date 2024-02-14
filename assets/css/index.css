@@ -237,8 +237,30 @@ html, body{
 
 .results .result-detail{
     width: 100%;
-    border-bottom: 2px solid var(--color-dark);
-    margin-bottom: 10px;
+    margin: 20px auto;
+}
+
+
+.result-detail .result{
+    width: 90%;
+    display: flex;
+}
+
+.result label{
+    width: 50%;
+}
+
+.result progress{
+    width: 50%;
+}
+
+
+.br-line{
+    width: 80%;
+    height: 5px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background-color: var(--color-dark);
 }
 
 .results .my-courses{
@@ -332,10 +354,6 @@ html, body{
     }
     .details .results{
         width: 100%;
-    }
-
-    .results .result label{
-        font-size: 0.8em;
     }
 
     .details  .schedule{
