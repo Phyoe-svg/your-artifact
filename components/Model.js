@@ -1,32 +1,3 @@
-const sample_form = {
-  test_db: {
-    // user table
-    Users: {
-      //   0: {
-      //     id: 0,
-      //     username: "domak",
-      //     email: "domak@gmail.com",
-      //     password: "dompass",
-      //     since: "13 Feb 2024",
-      //     profile: "./profile.jpg",
-      //     bio: "take the risk, aganist the world",
-      //   },
-      //   1: {
-      //     id: 1,
-      //   username: "Kyaw Than",
-      //   email: "domak1090@gmail.com",
-      //   password: "dompass",
-      //   since: "13 Feb 2024",
-      //   profile: "./profile.jpg",
-      //   bio: "take the risk, aganist the world",
-      //   },
-    },
-  },
-};
-// let obj_length = Object.keys(sample_form.test_db.Users).length;
-// console.log(obj_length)
-// console.log(sample_form.test_db.Users[obj_length]);
-
 class Model {
   db;
   db_name = "learning";
@@ -98,21 +69,23 @@ class Model {
 }
 
 class User extends Model {}
+class MyCourse extends Model {}
 class Course extends Model {}
+class Lesson extends Model {}
 
-const course = new Course();
-console.log(
-  course.update({
-    id: 0,
-    aurthor: "Martin2020",
-    publish_date: "13 feb 24",
-    duration: "10 hours",
-    logo: "./logo.png",
-    level: "Beginner",
-    desc: "Amazing course",
-  })
-);
-course.commit();
+// const course = new Course();
+// console.log(
+//   course.update({
+//     id: 0,
+//     aurthor: "Martin2020",
+//     publish_date: "13 feb 24",
+//     duration: "10 hours",
+//     logo: "./logo.png",
+//     level: "Beginner",
+//     desc: "Amazing course",
+//   })
+// );
+// course.commit();
 // localStorage.clear();
 // const user = new User();
 // console.log(

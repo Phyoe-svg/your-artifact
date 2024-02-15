@@ -1,28 +1,31 @@
-const Datas = [
-  {
-    id: 0,
-    progress: true,
-    finish: true,
-    streamURL: "https://www.youtube.com/embed/rsUpQ1FXPJg?si=Pv4RYFuc8TPkgomf",
-    title: "Variables",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus cumque quos ratione consequuntur provident laboriosam vel odit sapiente excepturi, enim suscipit consectetur consequatur repellendus, autem culpa doloribus quibusdam aliquid est."
-  },
-  {
-    id: 1,
-    progress: false,
-    finish: false,
-    streamURL: "https://www.youtube.com/embed/rsUpQ1FXPJg?si=Pv4RYFuc8TPkgomf",
-    title: "Variables",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus cumque quos ratione consequuntur provident laboriosam vel odit sapiente excepturi, enim suscipit consectetur consequatur repellendus, autem culpa doloribus quibusdam aliquid est."
-  },
-  {
-    id: 2,
-    progress: false,
-    finish: false,
-    streamURL: "https://www.youtube.com/embed/rsUpQ1FXPJg?si=Pv4RYFuc8TPkgomf",
-    title: "Variables",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus cumque quos ratione consequuntur provident laboriosam vel odit sapiente excepturi, enim suscipit consectetur consequatur repellendus, autem culpa doloribus quibusdam aliquid est."
-  },
-];
+import "../../components/Model.js";
 
-export default Datas;
+const lessons = {
+  0: {
+    id: 0,
+    course_id: 1,
+    topic: "Variables",
+    progress: true,
+    finish: false,
+    streamURL: "",
+    description: "Testing desc ",
+  },
+  1: {
+    id: 1,
+    course_id: 1,
+    topic: "Variables",
+    progress: false,
+    finish: frameElement,
+    description: "Testing desc ",
+  },
+  2: {
+    id: 2,
+    course_id: 1,
+    topic: "Variables",
+    progress: false,
+    finish: false,
+    description: "Testing desc ",
+  },
+};
+
+export default lessons;

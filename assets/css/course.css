@@ -4,121 +4,162 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+:root{
+    --primary-light: rgba(201, 181, 181, 0.706);
+    --topic-color: rgba(71, 53, 53, 0.66);
+    --font-1: 0.7em;
+    --font-2: 1em;
+    --font-3: 1.5em;
+}
 html, body{
     height: 100%;
-    background-color: wheat;
 }
 
 .container{
-    width: 100%;
     height: 100%;
-}
-
-.container .back{
-    margin-bottom: 20px;
-}
-
-.container .back a{
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 1em;
-    color: black;
-}
-
-.container h2{
-    width: fit-content;
-    margin: 20px auto;
+    background-color: var(--primary-light);
 }
 
 .container .lessons{
-    width: 95%;
+    width: 90%;
+    height: 100%;
+    padding: 50px;
+    overflow-y: scroll;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .lessons .lesson{
-    border: 1px solid grey;
-    width: 40%;
-    height: 110px;
+    width: 100%;
+    margin: 10px;
+    border: 1px solid var(--topic-color);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px;
     padding: 10px;
+}
+
+.lessons .lesson:hover{
+    transition: 0.3s ease-out;
+    transform: scale(1.05);
+}
+
+.lesson .topic{
+    font-weight: bold;
+    text-decoration: underline;
     margin: 10px auto;
-    border-radius: 20px;
-}
-
-@media screen and (max-width: 600px){
-    .container .lessons{
-        width: 100%;
-        /* background-color: red; */
-        display: block;
-    }
-
-    .lessons .lesson{
-        width: 90%; 
-    }
-}
-
-.lesson .progress{
-    background-color: gray;
-    width: fit-content;
-    margin: 0;
-    position: relative;
-    color: white;
-    font-weight: bold;
-    top: -20px;
-    padding: 0px 10px 0 10px;
-    border-radius: 20px;
-}
-
-.lesson .progress:empty{
-    display: none;
-}
-
-.lesson .video{
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
-    display: none;
-}
-
-.video .video-frame{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.lesson .title{
-    font-size: 1.2em;
-    font-weight: bold;
+    color: var(--topic-color);
+    width: 70%;
+    font-size: var(--font-3);
 }
 
 .lesson .description{
-    display: none;
-    padding: 10px;
+    font-size: var(--font-2);
+    margin: 20px;
     font-family: monospace;
+    display: none;
 }
 
-.lesson button{
-    border: none;
+.lesson .description::before{
+    content: "Description";
+    display: block;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.lesson .option{
+    display: flex;
+}
+
+.option div{
+    width: fit-content;
+}
+
+.option .action{
+    border: 1px solid var(--topic-color);
     padding: 10px;
     border-radius: 20px;
-    width: fit-content;
-    background-color: rgb(94, 91, 86);
-    color: white;
-    font-weight: bold;
     cursor: pointer;
-    margin: 10px;
 }
 
-.disabled{
+.option .action:hover{
+    transition: 0.3s ease-out;
+    transform: scale(1.1);
+    border: none;
+    color: white;
+    background-color: rgb(148, 140, 140);
+}
+
+/* video section */
+.lesson-video{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.704);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson-video .back{
+    width: fit-content;
+    margin: 10px;
+    background-color: rgba(104, 100, 100, 0.567);
+    padding: 10px;
+    border-radius: 30%;
+    color: white;
+    font-weight: bolder;
+    font-size: var(--font-3);
+}
+
+.back:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: 0.3s ease-in;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.lesson-video .video{
+    width: 90%;
+    border: 1px solid white;
+    height: 500px;
+    color: white;
+}
+
+.lesson-video .next{
+    width: fit-content;
     background-color: white;
+    margin-right: 10%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.next:hover{
+    transform: scale(1.2);
+    background-color: wheat;
     color: brown;
 }
 
-button:hover{
-    transform: scale(1.1);
-    color: wheat;
-    background-color: rgb(75, 64, 64);
+
+@media screen and (max-width: 600px) {
+    .lessons .lesson{
+        text-align: center;
+    }
+    .lessons .lesson .option{
+        display: block;
+    }
+
+    .option .action{
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .lesson .description{
+        width: 100%;
+        text-align: left;
+    }
 }
