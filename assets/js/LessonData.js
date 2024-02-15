@@ -1,31 +1,31 @@
-import "../../components/Model.js";
+import db from "../../components/Model.js";
 
-const lessons = {
-  0: {
-    id: 0,
-    course_id: 1,
-    topic: "Variables",
-    progress: true,
-    finish: false,
-    streamURL: "",
-    description: "Testing desc ",
-  },
-  1: {
-    id: 1,
-    course_id: 1,
-    topic: "Variables",
-    progress: false,
-    finish: frameElement,
-    description: "Testing desc ",
-  },
-  2: {
-    id: 2,
-    course_id: 1,
-    topic: "Variables",
-    progress: false,
-    finish: false,
-    description: "Testing desc ",
-  },
-};
-
+const my_courses = new db.myCourse();
+my_courses.insert({
+  course_id: 1,
+  topic: "Variables",
+  progress: true,
+  finish: false,
+  videoURL: "",
+  description: "Testing desc ",
+});
+my_courses.insert({
+  course_id: 1,
+  topic: "Variables",
+  progress: false,
+  finish: false,
+  videoURL: "",
+  description: "Testing desc ",
+});
+my_courses.insert({
+  course_id: 1,
+  topic: "Variables",
+  progress: false,
+  finish: false,
+  videoURL: "",
+  description: "Testing desc ",
+});
+// localStorage.clear();
+// my_courses.commit();
+const lessons = my_courses.getAll();
 export default lessons;

@@ -66,6 +66,12 @@ class Model {
   getAll() {
     return JSON.parse(localStorage.getItem(this.db_name))[this.table_name];
   }
+
+  // get by id
+  getOne(id){
+    const search_table = this.db[this.table_name];
+    return search_table[id];
+  }
 }
 
 class User extends Model {}
@@ -73,6 +79,13 @@ class MyCourse extends Model {}
 class Course extends Model {}
 class Lesson extends Model {}
 
+const db = {
+  user: User,
+  myCourse: MyCourse,
+  course: Course,
+  lesson: Lesson
+}
+export default db;
 // const course = new Course();
 // console.log(
 //   course.update({
