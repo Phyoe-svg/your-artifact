@@ -1,8 +1,8 @@
 import "./components/Tab.js";
+import "./components/datas/User_datas.js";
 import "./components/User.js";
 import Course from "./components/Course.js";
-import courses from "./components/Course_datas.js";
-
+import courses from "./components/datas/Course_datas.js";
 // add course to course section
 const all_courses = document.querySelector(".all-courses");
 const search = document.getElementById("search");

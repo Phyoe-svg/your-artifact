@@ -10,7 +10,10 @@ const results = document.getElementById("result-detail");
 const my_courses = document.getElementById("my-courses");
 
 const user_datas = JSON.parse(localStorage.getItem("current_user"));
-console.log(user_datas);
+// const user_datas = JSON.parse(localStorage.getItem("current_user"));
+  if (user_datas === null) {
+    window.location.href = "./templates/auth.html";
+  }
 // current user info 
 profile.src = user_datas.info.profile;
 welcome_profile.src = user_datas.info.profile;

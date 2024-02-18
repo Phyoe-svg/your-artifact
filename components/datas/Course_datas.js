@@ -1,4 +1,4 @@
-import db from "./Model.js";
+import db from "../Model.js";
 
 const course = new db.course();
 course.insert({

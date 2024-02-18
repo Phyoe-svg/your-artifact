@@ -24,7 +24,7 @@ class Model {
     // if the table is user, then check user is already register or not
     if (this.table_name === "User") {
       const users = Object.values(table);
-      const user = users.filter((user) => user.email === datas.email);
+      const user = users.filter((user) => user.info.email === datas.info.email);
       if (user.length != 0) {
         return "User Already Exists";
       }

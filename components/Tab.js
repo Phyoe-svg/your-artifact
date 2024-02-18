@@ -13,10 +13,7 @@ window.onload = () => {
       ? localStorage.setItem("current_tab", "display-home")
       : localStorage.getItem("current_tab");
   document.getElementById(current_tab).style.display = "block";
-  const current_user = JSON.parse(localStorage.getItem("current_user"));
-  if (current_user === null) {
-    window.location.href = "./templates/auth.html";
-  }
+  
 };
 // get the tabs
 const tabs = [
