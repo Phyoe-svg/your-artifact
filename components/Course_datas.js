@@ -37,7 +37,7 @@ course.insert({
   rating: 0.0,
   level: "Beginner",
 });
-// courses.commit()
+// course.commit();
 
 const courses = course.getAll();
 export default courses;

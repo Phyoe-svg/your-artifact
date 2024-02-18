@@ -9,21 +9,8 @@ const email = document.getElementById("email");
 const results = document.getElementById("result-detail");
 const my_courses = document.getElementById("my-courses");
 
-const user_datas = {
-    info: {
-        id: 0,
-        profile: "../assets/icons/94a65614997aeace.jfif",
-        username: "Dom AK",
-        email: "domak@gmail.com",
-    },
-    progress_course: [
-        {id: 0, title: "Python", progress: 100},
-        {id: 1, title: "C", progress: 50},
-        {id: 2, title: "Ruby", progress: 20},
-        {id: 3, title: "JavaScript", progress: 70},
-    ],
-}
-
+const user_datas = JSON.parse(localStorage.getItem("current_user"));
+console.log(user_datas);
 // current user info 
 profile.src = user_datas.info.profile;
 welcome_profile.src = user_datas.info.profile;
