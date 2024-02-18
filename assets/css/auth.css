@@ -126,6 +126,12 @@ form div input{
   border-radius: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .signup form{
+    width: 90%;
+  }
+}
+
 .signup form div{
   margin: 20px auto;
 }
@@ -146,6 +152,10 @@ form div input{
 .check input{
   width: fit-content;
   margin: 10px;
+}
+
+.check small{
+  color: white;
 }
 
 
@@ -183,6 +193,12 @@ form .username, form .password, form .email-preference{
   /* margin: 100px; */
 }
 
+@media screen and (max-width: 600px) {
+  .login form{
+    width: 90%;
+  }
+}
+
 .login form h2{
   font-size: 1.3em;
   color: white;
@@ -214,6 +230,10 @@ form .username, form .password, form .email-preference{
 .forget a{
   color: rgb(153, 153, 197);
   text-decoration: none;
+}
+
+.forget a:hover{
+  color: white;
 }
 
 /* login */

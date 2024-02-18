@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME</title>
+    <script
+      src="https://kit.fontawesome.com/04be286e27.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
@@ -11,12 +15,7 @@
       <div class="nav">
         <div class="profile">
           <div class="image">
-            <img
-              src=""
-              alt="profile"
-              srcset=""
-              id="profile"
-              />
+            <img src="" alt="profile" srcset="" id="profile" />
           </div>
           <div class="detail">
             <div class="name" id="username"></div>
@@ -28,35 +27,41 @@
         <div class="nav-items">
           <div class="item" id="home">
             <div class="icon">
-              <img src="../assets/icons/home.png" alt="dashboard" srcset="" />
+              <i class="fa-solid fa-house"></i>
             </div>
             <div class="text">DASHBOARD</div>
           </div>
 
           <div class="item" id="courses">
             <div class="icon">
-              <img src="../assets/icons/courses.png" alt="courses" srcset="" />
+              <i class="fa-solid fa-chalkboard-user"></i>
             </div>
             <div class="text">COURSES</div>
           </div>
 
           <div class="item" id="quiz">
             <div class="icon">
-              <img src="../assets/icons/quiz-game.png" alt="quiz" srcset="" />
+              <i class="fa-solid fa-circle-question"></i>
             </div>
             <div class="text">QUIZ</div>
           </div>
 
           <div class="item" id="projects">
             <div class="icon">
-              <img
-                src="../assets/icons/complete.png"
-                alt="projects"
-                srcset=""
-              />
+              <i class="fa-solid fa-file-pen"></i>
             </div>
             <div class="text">PROJECTS</div>
           </div>
+
+          <div class="logout">
+            <div class="edit-profile" id="edit-profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="logout-icon" id="logout">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+          </div>
+          <!-- logout and profile -->
         </div>
         <!-- items -->
       </div>
@@ -67,15 +72,11 @@
           <div class="dashboard">
             <div class="welcome">
               <div class="text">
-                Welcome back <span id="welcome-username"></span>, <small>Continue your progress</small>
+                Welcome back <span id="welcome-username"></span>,
+                <small>Continue your progress</small>
               </div>
               <div class="profile">
-                <img
-                  src=""
-                  alt="profile"
-                  srcset=""
-                  id="welcome-profile"
-                />
+                <img src="" alt="profile" srcset="" id="welcome-profile" />
               </div>
             </div>
             <!-- welcome -->
@@ -101,7 +102,7 @@
                   <div class="courses" id="my-courses">
                     <!-- data in User.js -->
                   </div>
-                <!-- my courses -->
+                  <!-- my courses -->
                 </div>
               </div>
 
@@ -123,11 +124,11 @@
               id="search"
               placeholder="Search"
             />
-            </div>
-            <div class="courses">
-              <div class="all-courses"></div>
-            </div>
-          
+          </div>
+          <div class="courses">
+            <div class="all-courses"></div>
+          </div>
+
           <!-- data will entry by js -->
         </div>
         <!-- courses -->

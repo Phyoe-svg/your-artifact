@@ -45,3 +45,11 @@ const closeDisplay = (current_tab) => {
     document.getElementById("display-" + close_tab.id).style.display = "none";
   });
 };
+
+
+// logout
+const logout = document.getElementById("logout");
+logout.addEventListener("click", (e)=>{
+  localStorage.removeItem("current_user");
+  window.location.href = "/";
+})
