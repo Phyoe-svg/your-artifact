@@ -84,7 +84,8 @@ const db = {
   user: User,
   myCourse: MyCourse,
   course: Course,
-  lesson: Lesson
+  lesson: Lesson,
+  current_user: JSON.parse(localStorage.getItem("current_user"))
 }
 export default db;
 // const course = new Course();

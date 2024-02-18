@@ -1,4 +1,5 @@
 import db from "../../components/Model.js";
+import users from "../../components/datas/User_datas.js";
 
 window.onload = ()=>{
     const current_user = localStorage.getItem("current_user");
@@ -27,15 +28,6 @@ login_btn.addEventListener("click", (e)=>{
 const inputs = document.querySelectorAll(".signup input");
 const email_exits = document.getElementById("email-exists");
 const continues = document.getElementById("continue");
-const users = {
-  0: {
-    email: "domak@gmail.com",
-    
-  },
-  1: {
-    email: "kyaw@gmail.com",
-  },
-};
 
 const next_inputs = [
   document.querySelector("form .username"),
@@ -47,7 +39,7 @@ inputs.forEach((input) => {
     e.preventDefault();
     if (input.name === "email") {
       const email_exit = Object.values(users).filter(
-        (user) => user.email === input.value
+        (user) => user.info.email === input.value
       );
       if (email_exit.length > 0) {
         email_exits.style.color = "red";
@@ -88,3 +80,18 @@ continues.addEventListener("click", (e) => {
   }
   track++;
 });
+
+// login
+const account_login = document.getElementById("login-login-btn");
+account_login.addEventListener("click", (e)=>{
+  e.preventDefault();
+  const email = document.querySelector(".login #email");
+  const password = document.querySelector(".login #password");
+  const user_exists = Object.values(users).filter( user=> {
+    if( user.info.email === email.value && user.info.password === password.value){
+      localStorage.setItem("current_user", JSON.stringify(user));
+      window.location.href = "/";
+    }
+  });
+  document.getElementById("error").innerHTML = "Email or Password Incorrect";
+})

@@ -1,5 +1,4 @@
 import Result from "./Result.js";
-
 // this module will set the user datas 
 const profile = document.getElementById("profile");
 const welcome_profile = document.getElementById("welcome-profile");

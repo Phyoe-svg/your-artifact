@@ -1,7 +1,7 @@
 import db from "../Model.js";
 
 
-const users = [
+let users = [
   {
     info: {
       username: "Domak",
@@ -68,4 +68,7 @@ users.forEach( user => {
   new_user.insert(user);
   // new_user.commit();
 })
-console.log("user data");
+
+const user_datas = new db.user();
+users = user_datas.getAll();
+export default users;

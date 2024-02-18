@@ -1,3 +1,5 @@
+import db from "./Model.js";
+
 const Course = ({
   id,
   course_id,
@@ -15,6 +17,21 @@ const Course = ({
   card.addEventListener("click", (e) => {
     e.preventDefault();
     localStorage.setItem("course_id", course_id);
+    const user_progress = JSON.parse(localStorage.getItem("current_user"));
+    // console.log(user_progress);
+    const check_exists_progress = user_progress.progress_course.filter( course => {
+      if( course.title === title || course.progress > 0){
+        return course;
+      }
+    })
+    if( check_exists_progress.length === 0 ){
+      user_progress.progress_course.push({course_id: course_id, title: title, progress: 0});
+    }
+    // user_progress.progress_course.push({title: title, progress: 0});
+    localStorage.setItem("current_user", JSON.stringify(user_progress));
+    const update_progress = new db.user();
+    update_progress.update(user_progress);
+    update_progress.commit();
     window.location.href = "./templates/course.html";
   });
   card.innerHTML = `<div class="image" id="${id}">
