@@ -15,7 +15,7 @@ const Course = ({
   card.addEventListener("click", (e) => {
     e.preventDefault();
     localStorage.setItem("course_id", course_id);
-    window.location.href = "./course.html";
+    window.location.href = "./templates/course.html";
   });
   card.innerHTML = `<div class="image" id="${id}">
   <img src="${imgURL}" alt="" srcset="">

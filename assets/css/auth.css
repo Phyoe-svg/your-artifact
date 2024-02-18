@@ -1,0 +1,151 @@
+* {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}
+
+.container h1 {
+  margin: 10px;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+
+.container .option {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px;
+}
+
+.option .option-sign {
+  width: 90%;
+  display: flex;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.option .option-sign div {
+  width: 100px;
+  text-align: center;
+  margin: 5px;
+  padding: 15px;
+  font-family: monospace;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: rgb(17, 3, 3);
+  color: white;
+}
+
+.option .option-sign div:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.option .oauth {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+.oauth div {
+  width: fit-content;
+  margin: 10px;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.oauth div a {
+  text-decoration: none;
+  color: black;
+}
+
+.oauth div a i:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+/* action buttons and options */
+.container .signup{
+  position: absolute;
+  height: 100%;
+  background-color: white;
+  display: flex;
+}
+
+form div label{
+  color: green;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: block;
+  margin: 10px auto;
+}
+
+form div input{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.signup form{
+  width: 30%;
+  padding: 50px;
+  background-color: rgba(69, 8, 8, 0.204);
+  border-radius: 10px;
+}
+
+.signup form div{
+  margin: 20px auto;
+}
+
+.signup form .noti{
+  display: flex;
+}
+
+/* .check{
+  width: 100%;
+  background-color: red;
+} */
+
+.noti .email-preference .check{
+  display: flex;
+}
+
+.check input{
+  width: fit-content;
+  margin: 10px;
+}
+
+
+.noti button{
+  width: fit-content;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+form .username, form .password, form .email-preference{
+  display: none;
+}
+
+
+/* forms */

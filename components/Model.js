@@ -72,6 +72,7 @@ class Model {
     const search_table = this.db[this.table_name];
     return search_table[id];
   }
+
 }
 
 class User extends Model {}

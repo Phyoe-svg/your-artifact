@@ -17,11 +17,11 @@ const user_datas = {
         email: "domak@gmail.com",
     },
     progress_course: [
-        {id: 0, title: "Python", progress: 30},
+        {id: 0, title: "Python", progress: 100},
         {id: 1, title: "C", progress: 50},
         {id: 2, title: "Ruby", progress: 20},
         {id: 3, title: "JavaScript", progress: 70},
-    ]
+    ],
 }
 
 // current user info 
