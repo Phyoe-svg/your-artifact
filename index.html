@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HOME</title>
-    <script
-      src="https://kit.fontawesome.com/04be286e27.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./assets/css/index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav">
-        <div class="profile">
-          <div class="image">
-            <img src="" alt="profile" srcset="" id="profile" />
-          </div>
-          <div class="detail">
-            <div class="name" id="username"></div>
-            <small class="email" id="email"></small>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME</title>
+  <script src="https://kit.fontawesome.com/04be286e27.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="profile">
+        <div class="image">
+          <img src="" alt="profile" srcset="" id="profile" />
         </div>
-        <!-- profile -->
+        <div class="detail">
+          <div class="name" id="username"></div>
+          <small class="email" id="email"></small>
+        </div>
+      </div>
+      <!-- profile -->
 
-        <div class="nav-items">
-          <div class="item" id="home">
-            <div class="icon">
-              <i class="fa-solid fa-house"></i>
-            </div>
-            <div class="text">DASHBOARD</div>
+      <div class="nav-items">
+        <div class="item" id="home">
+          <div class="icon">
+            <i class="fa-solid fa-house"></i>
           </div>
+          <div class="text">DASHBOARD</div>
+        </div>
 
-          <div class="item" id="courses">
-            <div class="icon">
-              <i class="fa-solid fa-chalkboard-user"></i>
-            </div>
-            <div class="text">COURSES</div>
+        <div class="item" id="courses">
+          <div class="icon">
+            <i class="fa-solid fa-chalkboard-user"></i>
           </div>
+          <div class="text">COURSES</div>
+        </div>
 
-          <div class="item" id="quiz">
-            <div class="icon">
-              <i class="fa-solid fa-circle-question"></i>
-            </div>
-            <div class="text">QUIZ</div>
+        <div class="item" id="quiz">
+          <div class="icon">
+            <i class="fa-solid fa-circle-question"></i>
           </div>
+          <div class="text">QUIZ</div>
+        </div>
 
-          <div class="item" id="projects">
-            <div class="icon">
-              <i class="fa-solid fa-file-pen"></i>
-            </div>
-            <div class="text">PROJECTS</div>
+        <div class="item" id="projects">
+          <div class="icon">
+            <i class="fa-solid fa-file-pen"></i>
           </div>
+          <div class="text">PROJECTS</div>
+        </div>
 
-          <div class="logout">
-            <div class="edit-profile" id="edit-profile">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="logout-icon" id="logout">
-              <i class="fa-solid fa-right-from-bracket"></i>
-            </div>
+        <div class="item">
+          <div class="icon" id="edit-profile">
+            <i class="fa-solid fa-user"></i>
           </div>
+          <div class="text">Edit Profile</div>
+        </div>
+        
+        <div class="item" id="logout">
+          <div class="icon">
+            <i class="fa-solid fa-logout"></i>
+          </div>
+          <div class="text">Logout</div>
+        </div>
           <!-- logout and profile -->
         </div>
         <!-- items -->
@@ -118,12 +122,7 @@
         <!-- home -->
         <div class="display-data" id="display-courses">
           <div class="search">
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Search"
-            />
+            <input type="search" name="search" id="search" placeholder="Search" />
           </div>
           <div class="courses">
             <div class="all-courses"></div>
@@ -139,5 +138,6 @@
       </div>
     </div>
     <script type="module" src="./index.js"></script>
-  </body>
+</body>
+
 </html>

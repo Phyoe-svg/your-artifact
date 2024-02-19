@@ -1,18 +1,73 @@
 import lessons from "../assets/js/LessonData.js";
 import db from "./Model.js";
 
+const course_id = Number(localStorage.getItem("course_id"));
+const current_user = JSON.parse(localStorage.getItem("current_user"));
+// removing item to test again
+const my_course = new db.myCourse();
+const reset = () => {
+  my_course.remove(0);
+  my_course.remove(1);
+  my_course.remove(2);
+  my_course.commit();
+
+  const lessons_ = new db.lesson();
+  lessons_.remove(0);
+  lessons_.remove(1);
+  lessons_.remove(2);
+  lessons_.remove(3);
+  lessons_.remove(4);
+  lessons_.remove(5);
+  lessons_.remove(6);
+  lessons_.commit();
+};
+// reset();
+/* NOTICE !!!!! */
+// first purpose is to return the progress percent of the course but there's some issues related with lessons loopss i think
+// i know that's my bad codes, But there's a deadline and I don't have much time to re-analysis the codes
+// so I use another solution to add 1 everytime we click next
+//
 const countOf = (course_id) => {
   const progress_lesson = Object.values(lessons).filter(
-    (lesson) => lesson.course_id === course_id 
+    (lesson) => lesson.course_id === course_id && lesson.user_id
   );
-  const finished = Object.values(lessons).filter((lesson) => lesson.finish && lesson.course_id === course_id);
-  // console.log
+  const finished = Object.values(lessons).filter(
+    (lesson) => lesson.finish && lesson.course_id === course_id
+  );
   let progress = (finished.length / progress_lesson.length) * 100;
-  console.log(progress);
-  return progress;
+  if (finished.length === progress_lesson.length) {
+  }
+  return {
+    lesson_length: progress_lesson.length,
+    finish_length: finished.length,
+    progress: progress,
+  };
 };
 
-countOf(1);
+let track_percent = countOf(course_id);
+
+// update to user progress
+const update_user_progress = (title, progress) => {
+  let progress_data = {
+    course_id: course_id,
+    title: title,
+    progress: progress,
+  };
+  const users = new db.user();
+  let current_user = JSON.parse(localStorage.getItem("current_user"));
+  let logined_user = Object.values(users.getAll()).filter(
+    (user) => user.id === current_user.id
+  );
+  // check there is course is alreadt exist if true: update it false push
+  const check_course = current_user.progress_course.findIndex(
+    (course) => course.course_id === course_id
+  );
+  current_user.progress_course[check_course] = progress_data;
+  logined_user[0].progress_course[check_course] = progress_data;
+  localStorage.setItem("current_user", JSON.stringify(current_user));
+  users.update(logined_user);
+  users.commit();
+};
 
 const container = document.querySelector(".container");
 const Video = (id, videoURL) => {
@@ -49,14 +104,16 @@ const Video = (id, videoURL) => {
     let finish = course.getOne(id);
     console.log(Object.values(lessons).length);
     let next_progress =
-      id+1 != Object.values(lessons).length ? course.getOne(id + 1) : course.getOne(id);
+      id + 1 != Object.values(lessons).length
+        ? course.getOne(id + 1)
+        : course.getOne(id);
     // console.log(typeof(id));
-      next_progress.progress = true;
+    next_progress.progress = true;
     finish.finish = true;
     finish.user_id = db.current_user.id;
+    // finish.who_finished.push(db.curr.id);
     course.update(finish);
     course.update(next_progress);
-
     if (course.commit()) {
       const my_course = new db.myCourse();
       let check = [];
@@ -67,21 +124,35 @@ const Video = (id, videoURL) => {
           }
         });
       }
-
       if (check.length === 0 || my_course.getAll() === undefined) {
-        my_course.insert({
+        let course_progress_data = {
           lesson_id: finish.id,
           user_id: db.current_user.id,
           course_id: finish.course_id,
           topic: finish.topic,
           finish: true,
           user_id: db.current_user.id,
-          track: countOf(finish.course_id)
-        });
+          track:
+            ((track_percent.finish_length + 1) / track_percent.lesson_length) *
+            100,
+        };
+
+        update_user_progress(
+          course_progress_data.topic,
+          course_progress_data.track
+        );
+        my_course.insert(course_progress_data);
         my_course.commit();
       }
 
-      window.location.href = "/templates/course.html";
+      if (track_percent.finish_length + 1 === track_percent.lesson_length) {
+        alert(
+          "Congratulation!!! U've finished the course, Hope you get something from this lessons"
+        );
+        window.location.href = "../index.html";
+      } else {
+        window.location.href = "/templates/course.html";
+      }
     }
 
     // progress update to other table

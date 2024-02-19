@@ -3,6 +3,7 @@ import "./components/datas/User_datas.js";
 import "./components/User.js";
 import Course from "./components/Course.js";
 import courses from "./components/datas/Course_datas.js";
+import db from "./components/Model.js";
 // add course to course section
 const all_courses = document.querySelector(".all-courses");
 const search = document.getElementById("search");
@@ -26,3 +27,4 @@ search.addEventListener("input", (e)=>{
     all_courses.appendChild(Course(course));
   })
 })
+

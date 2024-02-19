@@ -23,6 +23,15 @@ login_btn.addEventListener("click", (e)=>{
   login.style.display = 'flex';
 })
 
+// back to main
+const back_login = document.querySelector(".login .back");
+const back_singup = document.querySelector(".signup .back");
+back_login.addEventListener("click", (e)=>{
+  login.style.display = 'none';
+})
+back_singup.addEventListener("click", (e)=>{
+  signup.style.display = 'none';
+})
 
 // input validate and continue process
 const inputs = document.querySelectorAll(".signup input");

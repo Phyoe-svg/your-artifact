@@ -79,12 +79,13 @@ class User extends Model {}
 class MyCourse extends Model {}
 class Course extends Model {}
 class Lesson extends Model {}
-
+class MyLesson extends Model{}
 const db = {
   user: User,
   myCourse: MyCourse,
   course: Course,
-  lesson: Lesson
+  lesson: Lesson,
+  myLesson: MyLesson
 }
 export default db;
 // const course = new Course();

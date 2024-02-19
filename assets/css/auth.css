@@ -193,6 +193,17 @@ form .username, form .password, form .email-preference{
   /* margin: 100px; */
 }
 
+.back{
+  color: white;
+  margin: 10px auto;
+}
+
+.back:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
 @media screen and (max-width: 600px) {
   .login form{
     width: 90%;
