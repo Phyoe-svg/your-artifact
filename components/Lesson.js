@@ -1,76 +1,11 @@
-import lessons from "../assets/js/LessonData.js";
 import db from "./Model.js";
 
+const user = new db.user();
 const course_id = Number(localStorage.getItem("course_id"));
-const current_user = JSON.parse(localStorage.getItem("current_user"));
-// removing item to test again
-const my_course = new db.myCourse();
-const reset = () => {
-  my_course.remove(0);
-  my_course.remove(1);
-  my_course.remove(2);
-  my_course.commit();
+const finished_lessons = user.getOne(db.current_user.id);
+console.log(finished_lessons);
 
-  const lessons_ = new db.lesson();
-  lessons_.remove(0);
-  lessons_.remove(1);
-  lessons_.remove(2);
-  lessons_.remove(3);
-  lessons_.remove(4);
-  lessons_.remove(5);
-  lessons_.remove(6);
-  lessons_.commit();
-};
-// reset();
-/* NOTICE !!!!! */
-// first purpose is to return the progress percent of the course but there's some issues related with lessons loopss i think
-// i know that's my bad codes, But there's a deadline and I don't have much time to re-analysis the codes
-// so I use another solution to add 1 everytime we click next
-//
-const countOf = (course_id) => {
-  const progress_lesson = Object.values(lessons).filter(
-    (lesson) => lesson.course_id === course_id && lesson.user_id
-  );
-  const finished = Object.values(lessons).filter(
-    (lesson) => lesson.finish && lesson.course_id === course_id
-  );
-  let progress = (finished.length / progress_lesson.length) * 100;
-  if (finished.length === progress_lesson.length) {
-  }
-  return {
-    lesson_length: progress_lesson.length,
-    finish_length: finished.length,
-    progress: progress,
-  };
-};
-
-let track_percent = countOf(course_id);
-
-// update to user progress
-const update_user_progress = (title, progress) => {
-  let progress_data = {
-    course_id: course_id,
-    title: title,
-    progress: progress,
-  };
-  const users = new db.user();
-  let current_user = JSON.parse(localStorage.getItem("current_user"));
-  let logined_user = Object.values(users.getAll()).filter(
-    (user) => user.id === current_user.id
-  );
-  // check there is course is alreadt exist if true: update it false push
-  const check_course = current_user.progress_course.findIndex(
-    (course) => course.course_id === course_id
-  );
-  current_user.progress_course[check_course] = progress_data;
-  logined_user[0].progress_course[check_course] = progress_data;
-  localStorage.setItem("current_user", JSON.stringify(current_user));
-  users.update(logined_user);
-  users.commit();
-};
-
-const container = document.querySelector(".container");
-const Video = (id, videoURL) => {
+const Video = (id, videoURL)=>{
   const lesson_video = document.createElement("div");
   const back = document.createElement("div");
   const video = document.createElement("div");
@@ -98,81 +33,31 @@ const Video = (id, videoURL) => {
     lesson_video.style.display = "none";
   };
 
-  // permission to next lessons
-  next.onclick = () => {
-    const course = new db.lesson();
-    let finish = course.getOne(id);
-    console.log(Object.values(lessons).length);
-    let next_progress =
-      id + 1 != Object.values(lessons).length
-        ? course.getOne(id + 1)
-        : course.getOne(id);
-    // console.log(typeof(id));
-    next_progress.progress = true;
-    finish.finish = true;
-    finish.user_id = db.current_user.id;
-    course.update(finish);
-    course.update(next_progress);
-    if (course.commit()) {
-      const my_course = new db.myCourse();
-      let check = [];
-      if (my_course.getAll() != undefined) {
-        check = Object.values(my_course.getAll()).filter((course) => {
-          if (course.lesson_id === finish.id) {
-            return course;
-          }
-        });
-      }
-      if (check.length === 0 || my_course.getAll() === undefined) {
-        let course_progress_data = {
-          lesson_id: finish.id,
-          user_id: db.current_user.id,
-          course_id: finish.course_id,
-          topic: finish.topic,
-          finish: true,
-          user_id: db.current_user.id,
-          track:
-            ((track_percent.finish_length + 1) / track_percent.lesson_length) *
-            100,
-        };
-
-        update_user_progress(
-          course_progress_data.topic,
-          course_progress_data.track
-        );
-        my_course.insert(course_progress_data);
-        my_course.commit();
-      }
-
-      if (track_percent.finish_length + 1 === track_percent.lesson_length) {
-        alert(
-          "Congratulation!!! U've finished the course, Hope you get something from this lessons"
-        );
-        window.location.href = "../index.html";
-      } else {
-        window.location.href = "/templates/course.html";
-      }
+  next.onclick = ()=>{
+    // const finised_lesson = my_lesson.getOne(course_id);
+    const duplicate_id = finished_lessons.finished_lessons.filter( lesson => lesson.id === id+1 && lesson.course_id === course_id);
+    if(duplicate_id.length === 0){
+      finished_lessons.finished_lessons.push({id: id + 1, course_id: course_id});
+      user.update(finished_lessons);
+      user.commit();
+      // current user data 
+      localStorage.setItem("current_user", JSON.stringify(finished_lessons));
     }
+    window.location.href = "./course.html";
+  }
 
-    // progress update to other table
-  };
   return lesson_video;
-};
+}
 
-const Lesson = ({
-  id,
-  course_id,
-  topic,
-  videoURL,
-  description,
-  progress,
-  finish,
-}) => {
+
+// my_lesson.commit();
+const container = document.querySelector(".container");
+const Lesson = ({ id, topic, videoURL, description }) => {
   const lesson = document.createElement("div");
   const option = document.createElement("div");
   const topic_ = document.createElement("div");
   const show_desc = document.createElement("div");
-  const watch = document.createElement("div");
+  const watch = document.createElement("button");
   const descript = document.createElement("div");
 
   // given class Name to each new elements
@@ -190,19 +75,17 @@ const Lesson = ({
   lesson.appendChild(option);
   lesson.appendChild(descript);
 
-  //
-  const progress_finished = () => {
-    if (progress && finish) {
-      return " - Finished";
-    }
-    if (progress) {
-      return " - Progress";
-    }
-    return "";
-  };
-  topic_.innerHTML = topic + `<span>${progress_finished()}</span>`;
+  topic_.innerText = topic;
   show_desc.innerText = "Description";
   watch.innerText = "Watch";
+  (id===0? "": watch.disabled = true);
+  // const next = my_lesson.getOne(course_id).lessons;
+  finished_lessons.finished_lessons.forEach( lesson => {
+    if( lesson.id === id && lesson.course_id === course_id){
+      watch.disabled = false;
+    }
+  })
+  
   descript.innerText = description;
 
   // show and hide description
@@ -214,14 +97,9 @@ const Lesson = ({
     }
   };
 
-  // watch the lesson and continuous the progress
-  watch.onclick = () => {
-    const current_courses = new db.lesson().getAll();
-    const previous_finished =
-      id > 0 ? current_courses[id - 1].finish : current_courses[id].finish;
-    if (progress || previous_finished) {
-      container.appendChild(Video(id, videoURL));
-    }
+  // watch 
+  watch.onclick = ()=>{
+    container.appendChild(Video(id, videoURL));
   };
   return lesson;
 };

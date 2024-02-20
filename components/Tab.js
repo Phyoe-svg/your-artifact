@@ -1,9 +1,3 @@
-// const tabs = [
-//     { home: document.getElementById("home") },
-//     { courses: document.getElementById("courses") },
-//     { quiz: document.getElementById("quiz") },
-//     { projects: document.getElementById("projects") }
-// ]
 const display = document.getElementById("display");
 
 window.onload = () => {
