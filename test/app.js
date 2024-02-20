@@ -63,9 +63,29 @@ const users = [
     progress_course: [],
   },
 ];
-users.forEach( user => {
-  const new_user = new db.user();
-  new_user.insert(user);
-  new_user.commit();
-})
+// users.forEach( user => {
+//   const new_user = new db.user();
+//   new_user.insert(user);
+//   new_user.commit();
+// })
+
+const course = {
+  info: {
+    course_id: 0,
+    imgURL: "../assets/icons/94a65614997aeace.jfif",
+    title: "JavaScript",
+    aurthor: "David J Martin",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum deleniti dolor vel est, iusto aliquam dolores esse odio beatae eaque voluptate eligendi. Ut aspernatur, consectetur quia inventore animi atque!",
+    rating: 0.0,
+    level: "Beginner",
+  },
+  lessons: [
+    { topic: "Variables 0 ", videoURL: "", description: "Testing desc " },
+    { topic: "Variables 0 ", videoURL: "", description: "Testing desc " },
+  ],
+}
+
+const course_data = new db.course();
+course_data.insert(course);
+course_data.commit();
 console.log("user data");

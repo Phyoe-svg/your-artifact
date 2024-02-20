@@ -70,6 +70,9 @@ class Model {
   // get by id
   getOne(id){
     const search_table = this.db[this.table_name];
+    if(search_table === undefined ){
+      return false;
+    }
     return search_table[id];
   }
 
@@ -79,12 +82,13 @@ class User extends Model {}
 class MyCourse extends Model {}
 class Course extends Model {}
 class Lesson extends Model {}
-
+class MyLesson extends Model {}
 const db = {
   user: User,
   myCourse: MyCourse,
   course: Course,
   lesson: Lesson,
+  myLesson: MyLesson,
   current_user: JSON.parse(localStorage.getItem("current_user"))
 }
 export default db;

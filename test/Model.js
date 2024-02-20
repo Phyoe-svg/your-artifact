@@ -69,6 +69,10 @@ class Model {
 
   // get by id
   getOne(id){
+    console.log(this.db[this.table_name]);
+    if( this.db[this.table_name] === null ){
+      return false;
+    }
     const search_table = this.db[this.table_name];
     return search_table[id];
   }
@@ -79,69 +83,14 @@ class User extends Model {}
 class MyCourse extends Model {}
 class Course extends Model {}
 class Lesson extends Model {}
-class MyLesson extends Model{}
+class MyLesson extends Model {}
+
 const db = {
   user: User,
   myCourse: MyCourse,
   course: Course,
   lesson: Lesson,
-  myLesson: MyLesson
+  my_lesson: MyLesson,
 }
+
 export default db;
-// const course = new Course();
-// console.log(
-//   course.update({
-//     id: 0,
-//     aurthor: "Martin2020",
-//     publish_date: "13 feb 24",
-//     duration: "10 hours",
-//     logo: "./logo.png",
-//     level: "Beginner",
-//     desc: "Amazing course",
-//   })
-// );
-// course.commit();
-// localStorage.clear();
-// const user = new User();
-// console.log(
-//   user.insert({
-//     username: "Kyaw Than",
-//     email: "domak1090@gmail.com",
-//     password: "dompass",
-//     since: "13 Feb 2024",
-//     profile: "./profile.jpg",
-//     bio: "take the risk, aganist the world",
-//   })
-// );
-// console.log(
-//   user.insert({
-//     username: "Kyaw Than",
-//     email: "domak1010@gmail.com",
-//     password: "dompass",
-//     since: "13 Feb 2024",
-//     profile: "./profile.jpg",
-//     bio: "take the risk, aganist the world",
-//   })
-// );
-// console.log(
-//   user.update({
-//     id: 0,
-//     username: "May",
-//     email: "May@gmail.com",
-//     password: "dompass",
-//     since: "13 Feb 2024",
-//     profile: "./profile.jpg",
-//     bio: "take the risk, aganist the world",
-//   })
-// );
-// user.commit();
-
-// console.log(user.getAll());
-// user.commit();
-// const datas = JSON.parse(localStorage.getItem("learning"));
-// console.log(datas.User);
-
-// const user = new User();
-// user.remove(0);
-// user.commit();
-// console.log(user.getAll());

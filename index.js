@@ -9,14 +9,14 @@ const all_courses = document.querySelector(".all-courses");
 const search = document.getElementById("search");
 
 Object.values(courses).forEach( course => {
-    all_courses.appendChild(Course(course));
+    all_courses.appendChild(Course(course.info));
 })
 
 const cache_courses = Object.values(courses);
 
 search.addEventListener("input", (e)=>{
   let matched_list = cache_courses.filter( course =>{
-    if( course.title.toLowerCase().includes(search.value)){
+    if( course.info.title.toLowerCase().includes(search.value)){
       return course;
     }
   })
@@ -24,7 +24,7 @@ search.addEventListener("input", (e)=>{
     all_courses.removeChild(all_courses.firstChild);
   }
   matched_list.forEach( course =>{
-    all_courses.appendChild(Course(course));
+    all_courses.appendChild(Course(course.info));
   })
 })
 

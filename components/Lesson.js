@@ -111,7 +111,6 @@ const Video = (id, videoURL) => {
     next_progress.progress = true;
     finish.finish = true;
     finish.user_id = db.current_user.id;
-    // finish.who_finished.push(db.curr.id);
     course.update(finish);
     course.update(next_progress);
     if (course.commit()) {

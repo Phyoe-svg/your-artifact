@@ -1,12 +1,10 @@
-import Lesson from "../../components/Lesson.js";
-import lessons from "./LessonData.js";
+import db from "../../components/Model.js";
+import Lesson from "./Lesson.js";
+import courses from "../../components/datas/Course_datas.js";
 
 const lesson_view = document.getElementById("lessons");
 // show lessons
-if( localStorage.getItem("course_id") !== null ){
-  Object.values(lessons).filter( lesson => {
-    if(lesson.course_id === Number(localStorage.getItem("course_id"))){
-      lesson_view.appendChild(Lesson(lesson));
-    }
-  })
-}
+const course_id = Number(localStorage.getItem("course_id"));
+courses[course_id].lessons.forEach( lesson => {
+  lesson_view.appendChild(Lesson(lesson));
+})

@@ -21,9 +21,17 @@ welcome_profile.src = user_datas.info.profile;
 username.innerText = user_datas.info.username;
 welcome_username.innerText = user_datas.info.username;
 email.innerText = user_datas.info.email;
-
-const my_course = new db.myCourse();
-
+const user = new db.user();
+const courses = new db.course();
+user_datas.progress_course.forEach( course => {
+  const user_course = user_datas.finished_lessons.filter( finish => finish.course_id === course.course_id);
+  const lessons = courses.getOne(course.course_id).lessons.filter( lesson => lesson.course_id === course.course_id );
+  course.progress = (user_course.length/lessons.length)*100;
+  localStorage.setItem("current_user", JSON.stringify(user_datas));
+  user.update(user_datas);
+  user.commit();
+})
+console.log(user_datas);
 
 // results course with progress complete
 user_datas.progress_course.forEach((result) => {

@@ -77,7 +77,7 @@ html, body{
     display: flex;
 }
 
-.option div{
+.option .action{
     width: fit-content;
 }
 
@@ -86,6 +86,10 @@ html, body{
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.option button{
+    background-color: white;
 }
 
 .option .action:hover{
