@@ -1,0 +1,42 @@
+{
+    "courses": [
+        {
+            "info": {
+                "course_id": "1",
+                "title": "JavaScript",
+                "aurthor": "Martin",
+                "info": "Test",
+                "rating": "4",
+                "level": "Advanced"
+            },
+            "lessons": [
+                {
+                    "id": 0,
+                    "course_id": "1",
+                    "topic": "sd",
+                    "videoURL": "asd",
+                    "description": "asd"
+                }
+            ]
+        },
+        {
+            "info": {
+                "course_id": "2",
+                "title": "C",
+                "aurthor": "Martin",
+                "info": "Test",
+                "rating": "4",
+                "level": "Advanced"
+            },
+            "lessons": [
+                {
+                    "id": 0,
+                    "course_id": "2",
+                    "topic": "sd",
+                    "videoURL": "asd",
+                    "description": "sdaf"
+                }
+            ]
+        }
+    ]
+}

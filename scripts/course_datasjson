@@ -1,0 +1,15 @@
+{
+    "courses": [
+        {
+            "info": {
+                "course_id": 0,
+                "title": "C",
+                "aurthor": "sd",
+                "info": "ds",
+                "rating": 3,
+                "level": "Intermediate"
+            },
+            "lessons": []
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <style>
+        * {
+            width: 90%;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .fields{
+            width: 100%;
+            text-align: center;
+        }
+        input[type=button]{
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fields">
+        <h2>Course Info</h2>
+        <input type="number" id="course-id" placeholder="course ID">
+        <input type="text" id="title" placeholder="title" required>
+        <input type="text" id="aurthor" placeholder="aurthor" required>
+        <input type="text" id="info" placeholder="info" required>
+        <input type="number" id="rating" placeholder="rating" required>
+        <select id="level" required>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+        <h2>Lessons</h2>
+        <input type="text" id="topic" placeholder="Topic" required>
+        <input type="text" id="videoURL" placeholder="VideoURL: <iframe></iframe>" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="button" value="Add Lesson" id="add-lesson">
+        <input type="button" value="Add this Course" id="add-course">
+    </div>
+    <script>
+        const add_lesson = document.getElementById("add-lesson");
+        const add_course = document.getElementById("add-course");
+        const course_id = document.getElementById("course-id");
+        let lesson_id = 0;
+        let lessons = [];
+        add_lesson.addEventListener("click", () => {
+            const lesson = {
+                id: lesson_id,
+                course_id: course_id.value,
+                topic: document.getElementById("topic").value,
+                videoURL: document.getElementById("videoURL").value,
+                description: document.getElementById("description").value
+            };
+            lessons.push(lesson);
+            lesson_id += 1;
+            document.getElementById("topic").value = "";
+            document.getElementById("videoURL").value = "";
+            document.getElementById("description").value = "";
+        });
+
+        add_course.addEventListener("click", (e) => {
+            const course = {
+                info: {
+                    course_id: course_id.value,
+                    title: document.getElementById("title").value,
+                    aurthor: document.getElementById("aurthor").value,
+                    info: document.getElementById("info").value,
+                    rating: document.getElementById("rating").value,
+                    level: document.getElementById("level").value
+                },
+                lessons: lessons
+            }
+            fetch("/addData", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(course)
+            }).then(response => response.json())
+                .then(data => console.log(data)).catch(err => console.error(err))
+        })
+    </script>
+</body>
+
+</html>
