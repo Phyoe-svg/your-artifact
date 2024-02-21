@@ -79,7 +79,8 @@ continues.addEventListener("click", (e) => {
         profile: "./assets/icons/94a65614997aeace.jfif",
         agreeNoti: inputs[3].value,
       },
-      progress_course: []
+      progress_course: [],
+      finished_lessons: []
     };
     const user = new db.user();
     user.insert(new_user);
@@ -92,10 +93,22 @@ continues.addEventListener("click", (e) => {
 
 // login
 const account_login = document.getElementById("login-login-btn");
+const email = document.querySelector(".login #email");
+email.addEventListener("input", ()=>{
+  const validate = document.querySelector(".login-email small");
+  if( !email.value.endsWith("@gmail.com")){
+    validate.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    validate.style.color = "red";
+  }else{
+    validate.innerHTML= `<i class="fa-solid fa-check"></i>`;
+    validate.style.color = "green";
+  }
+})
 account_login.addEventListener("click", (e)=>{
   e.preventDefault();
   const email = document.querySelector(".login #email");
   const password = document.querySelector(".login #password");
+
   const user_exists = Object.values(users).filter( user=> {
     if( user.info.email === email.value && user.info.password === password.value){
       localStorage.setItem("current_user", JSON.stringify(user));
