@@ -3,7 +3,7 @@ const Result = (result) => {
   
   result_div.className = "result";
   result_div.innerHTML = `<label for="progress">${result.title}</label>
-    <progress value="${result.progress}" max="100"></progress>${result.progress.toFixed(0)}%`;
+    <progress value="${result.progress}" max="100"></progress>${typeof(result.progress) === "string" ? "Invalid": result.progress.toFixed(0)}%`;
   return result_div;
 };
 

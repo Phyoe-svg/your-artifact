@@ -23,14 +23,25 @@ welcome_username.innerText = user_datas.info.username;
 email.innerText = user_datas.info.email;
 const user = new db.user();
 const courses = new db.course();
-user_datas.progress_course.forEach( course => {
-  const user_course = user_datas.finished_lessons.filter( finish => finish.course_id === course.course_id);
-  const lessons = courses.getOne(course.course_id).lessons.filter( lesson => lesson.course_id === course.course_id );
-  course.progress = (user_course.length/lessons.length)*100;
+user_datas.progress_course.forEach((course) => {
+  const user_course = user_datas.finished_lessons.filter(
+    (finish) => finish.course_id === course.course_id
+  );
+  (function (){
+    if (courses.getOne(course.course_id) === undefined) {
+      course.progress = "Invalid";
+    } else {
+      const lessons = courses
+        .getOne(course.course_id)
+        .lessons.filter((lesson) => lesson.course_id === course.course_id);
+      course.progress = (user_course.length / lessons.length) * 100;
+    }
+  })();
+  console.log(course.progress);
   localStorage.setItem("current_user", JSON.stringify(user_datas));
   user.update(user_datas);
   user.commit();
-})
+});
 console.log(user_datas);
 
 // results course with progress complete

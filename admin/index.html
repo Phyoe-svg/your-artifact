@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div class="options">
+            <div class="manage-course" id="manage-course">Manage Course</div>
+            <div class="manage-user" id="manage-user">Manage User</div>
+            <div id="new-course">Add New Course</div>
+        </div>
+        <div class="manage-section">
+            <div class="current-courses">
+                <div class="title-names">
+                    <div class="course-id-title">COURSE ID</div>
+                    <div class="course-title">COURSE TITLE</div>
+                    <div class="lesson-count">LESSON COUNT</div>
+                    <div class="action-options">OPTIONS</div>
+                </div>
+                <!-- <div class="course">
+                    <div class="course-id">0</div>
+                    <div class="title">JavaScript</div>
+                    <div class="lesson-count">10</div>
+                    <div class="action">
+                        <div class="delete">Delete</div>
+                        <div class="edit">Edit</div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <!-- current courses  -->
+
+            <div class="users">
+                <div class="topic">
+                    <div class="user-id">ID</div>
+                    <div class="username">USERNAME</div>
+                    <div class="course-count">COURSE COUNT</div>
+                    <div class="user-manage-option">OPTION</div>
+                </div>
+                <!-- user topic -->
+                <div class="user">
+                    <div class="id">0</div>
+                    <div class="username">DomAK</div>
+                    <div class="current-progress-course-count">2</div>
+                    <div class="delete" id="user-delete">DELETE</div>
+                </div>
+
+                <div class="user">
+                    <div class="id">0</div>
+                    <div class="username">DomAK</div>
+                    <div class="current-progress-course-count">2</div>
+                    <div class="delete" id="user-delete">DELETE</div>
+                </div>
+
+                <div class="user">
+                    <div class="id">0</div>
+                    <div class="username">DomAK</div>
+                    <div class="current-progress-course-count">2</div>
+                    <div class="delete" id="user-delete">DELETE</div>
+                </div>
+                <!-- user -->
+            </div>
+            <!-- users -->
+        </div>
+        <!-- manage section with related datas -->
+        <div class="add-course" id="add-new-course-section">
+            <h1>Add New Course</h1>
+            <div class="course-inputs">
+                <div class="course-info">
+                    <h2>Course Info</h2>
+                    <input type="text" id="title" placeholder="title" required>
+                    <input type="text" id="aurthor" placeholder="aurthor" required>
+                    <input type="text" id="info" placeholder="info" required>
+                    <input type="number" id="rating" placeholder="rating" required>
+                    <select id="level" required>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="lesson-info">
+                    <h2>Lessons</h2>
+                    <small>Lesson data can have multiple data,so u can use add lesson button for multiple time</small>
+                    <input type="text" id="topic" placeholder="Topic" required>
+                    <input type="text" id="videoURL" placeholder="VideoURL: <iframe></iframe>" required>
+                    <input type="text" id="description" placeholder="Description" required>
+                    <input type="button" value="Add Lesson" id="add-lesson">
+                </div>
+            </div>
+            <input type="button" value="Add this Course" id="add-course" class="add-course-btn">
+        </div>
+        <!--add new course -->
+    </div>
+    <script src="./app.js" type="module"></script>
+</body>
+
+</html>

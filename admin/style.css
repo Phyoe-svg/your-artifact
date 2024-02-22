@@ -1,0 +1,210 @@
+* {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgb(240, 234, 234);
+}
+/* container */
+
+.options{
+    display: flex;
+    flex-direction: row;
+}
+
+.options div{
+    width: fit-content;
+    margin: 10px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options div:hover{
+    transform: scale(1.1);
+}
+
+.current-courses{
+    height: 100%;
+}
+
+.current-courses .title-names{
+    margin: 20px auto;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.current-courses .course{
+    margin: 20px auto;
+}
+.current-courses .title-names, .current-courses .course{
+    display: flex;
+}
+
+.title-names div, .course div{
+    width: 25%;
+    text-align: center;
+}
+
+.course .action{
+    display: flex;
+    justify-content: space-between;
+}
+
+.action div{
+    border: 1px solid rgba(0, 0, 0, 0.224);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 40%;
+    cursor: pointer;
+}
+
+.action div:hover{
+    transform: scale(1.1);
+}
+
+.action .delete{
+    background-color: red;
+    color: white;
+}
+
+.action .edit{
+    background-color: rgba(128, 128, 128, 0.369);
+    color: rgb(32, 28, 28);
+}
+
+/* current course section */
+
+.users{
+    height: 100%;
+    display: none;
+}
+
+.users .topic{
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+
+.topic div{
+    text-align: center;
+    padding: 10px;
+    width: 20%;
+}
+
+.users .user{
+    display: flex;
+    margin: 20px auto;
+}
+
+.user div{
+    text-align: center;
+    padding: 10px;
+    width: 20%;
+}
+
+.user .delete{
+    padding: 10px;
+    border: none;
+    color: white;
+    /* width: fit-content; */
+    border-radius: 10px;
+    background-color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user .delete:hover{
+    transform: scale(1.1);
+}
+
+/* users section */
+
+/* manage tab */
+.add-course{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background-color: rgba(48, 34, 34, 0.806);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-course h1{
+    margin: 0;
+    color: white;
+}
+.add-course h2{
+    color: white;
+}
+
+.add-course .course-inputs{
+    width: 90%;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: rgba(52, 39, 39, 0.871);
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.course-inputs div{
+    width: 40%;
+}
+
+
+input{
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: none;
+}
+
+select{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+input[type=button]{
+    margin: 10px auto;
+}
+
+.add-course-btn{
+    width: fit-content;
+    padding: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(28, 34, 28);
+    color: white;
+}
+
+.add-course-btn:hover{
+    transform: scale(1.1);
+}
+
+.lesson-info small{
+    font-family: monospace;
+    color: white;
+    font-weight: bold;
+}
+
+/* new course section */
