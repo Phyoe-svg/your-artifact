@@ -86,7 +86,7 @@ continues.addEventListener("click", (e) => {
     user.insert(new_user);
     user.commit();
     localStorage.setItem("current_user", JSON.stringify(new_user));
-    window.location.href = "/";
+    window.location.href = "/user";
   }
   track++;
 });
@@ -112,7 +112,7 @@ account_login.addEventListener("click", (e)=>{
   const user_exists = Object.values(users).filter( user=> {
     if( user.info.email === email.value && user.info.password === password.value){
       localStorage.setItem("current_user", JSON.stringify(user));
-      window.location.href = "/";
+      window.location.href = "/user";
     }
   });
   document.getElementById("error").innerHTML = "Email or Password Incorrect";

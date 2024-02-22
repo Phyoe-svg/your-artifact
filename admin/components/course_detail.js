@@ -1,5 +1,5 @@
 import db from "../Model/Model.js";
-
+const course_ = new db.course();
 const Course_detail = ({ course_id, title, count_lesson }) => {
   const course = document.createElement("div");
   const course_id_ = document.createElement("div");
@@ -34,14 +34,19 @@ const Course_detail = ({ course_id, title, count_lesson }) => {
 
   // add action listener
   delete_course.addEventListener("click", (e) => {
-    const course = new db.course();
-    course.remove(course_id);
-    course.commit();
-    window.location.href = "/admin";
+    let isDelete = confirm("Are you sure to delete " + title + " course?");
+    if (isDelete) {
+      course_.remove(course_id);
+      course_.commit();
+      course.style.display = 'none';
+    }
   });
 
   edit.addEventListener("click", (e) => {
-    alert("edit");
+    let current_course = course_.getOne(course_id);
+    current_course.info.title = "How To get GF";
+    course_.update(current_course);
+    // course_.commit();
   });
   return course;
 };

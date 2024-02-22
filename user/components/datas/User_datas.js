@@ -60,7 +60,7 @@ let users = [
   {
     info: {
       username: "Zaw Lin Naing",
-      email: "domak@gmail.com",
+      email: "zawlinnaing@gmail.com",
       password: "password",
       profile: "./assets/icons/94a65614997aeace.jfif",
       agreeNoti: "on",
