@@ -3,6 +3,7 @@ import "./components/datas/User_datas.js";
 import "./components/User.js";
 import Course from "./components/Course.js";
 import courses from "./components/datas/Course_datas.js";
+import "./components/edit_profile.js";
 import db from "./components/Model.js";
 // add course to course section
 const all_courses = document.querySelector(".all-courses");
@@ -28,3 +29,9 @@ search.addEventListener("input", (e)=>{
   })
 })
 
+// is new user or not
+const new_user = JSON.parse(localStorage.getItem("new-user"));
+if( new_user ){
+  const welcome = document.querySelector(".dashboard .welcome .text");
+  welcome.innerHTML = "Hello " + db.current_user.info.username + ", Let's Start your Journey with Us."
+}

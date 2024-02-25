@@ -1,3 +1,5 @@
+import db from "./Model.js";
+
 const display = document.getElementById("display");
 
 window.onload = () => {
@@ -42,5 +44,21 @@ const closeDisplay = (current_tab) => {
 const logout = document.getElementById("logout");
 logout.addEventListener("click", (e)=>{
   localStorage.removeItem("current_user");
-  window.location.href = "/";
+  localStorage.removeItem("new-user");
+  window.location.href = "/user";
+})
+
+// profile edit
+const edit_profile = document.getElementById("edit-profile");
+const edit_profile_btn = document.getElementById("edit-profile-btn");
+
+edit_profile_btn.addEventListener("click", (e)=>{
+  const image = document.getElementById("profile-image");
+  const username = document.getElementById("edit-username");
+  const email = document.getElementById("edit-email");
+  image.src = db.current_user.info.profile;
+  username.value = db.current_user.info.username;
+  email.value = db.current_user.info.email;
+  
+  edit_profile.style.display = "flex";
 })

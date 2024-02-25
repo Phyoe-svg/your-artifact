@@ -86,6 +86,7 @@ continues.addEventListener("click", (e) => {
     user.insert(new_user);
     user.commit();
     localStorage.setItem("current_user", JSON.stringify(new_user));
+    localStorage.setItem("new-user", true);
     window.location.href = "/user";
   }
   track++;

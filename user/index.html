@@ -52,92 +52,123 @@
           <div class="text">PROJECTS</div>
         </div>
 
-        <div class="item">
-          <div class="icon" id="edit-profile">
+        <div class="item" id="edit-profile-btn">
+          <div class="icon" id="edit-profile-icon">
             <i class="fa-solid fa-user"></i>
           </div>
           <div class="text">Edit Profile</div>
         </div>
-        
+
         <div class="item" id="logout">
           <div class="icon">
-            <i class="fa-solid fa-logout"></i>
+            <i class="fa-solid fa-right-from-bracket"></i>
           </div>
           <div class="text">Logout</div>
         </div>
-          <!-- logout and profile -->
-        </div>
-        <!-- items -->
+        <!-- logout and profile -->
       </div>
-      <!-- nav -->
-      <!-- display -->
-      <div class="display" id="display">
-        <div class="display-data" id="display-home">
-          <div class="dashboard">
-            <div class="welcome">
-              <div class="text">
-                Welcome back <span id="welcome-username"></span>,
-                <small>Continue your progress</small>
-              </div>
-              <div class="profile">
-                <img src="" alt="profile" srcset="" id="welcome-profile" />
-              </div>
+      <!-- items -->
+    </div>
+    <!-- nav -->
+    <!-- display -->
+    <div class="display" id="display">
+      <div class="display-data" id="display-home">
+        <div class="dashboard">
+          <div class="welcome">
+            <div class="text">
+              Welcome back <span id="welcome-username"></span>,
+              <small>Continue your progress</small>
             </div>
-            <!-- welcome -->
-
-            <div class="details">
-              <div class="results">
-                <div class="result-detail" id="result-detail">
-                  <div class="result-option">
-                    <h2>Results</h2>
-                    <div class="full-result">Full results -></div>
-                  </div>
-                  <!-- result -->
-                </div>
-
-                <!-- result-details  -->
-                <div class="br-line"></div>
-
-                <div class="my-courses">
-                  <div class="head">
-                    <h2>My Courses</h2>
-                    <div class="see-all">All -></div>
-                  </div>
-                  <div class="courses" id="my-courses">
-                    <!-- data in User.js -->
-                  </div>
-                  <!-- my courses -->
-                </div>
-              </div>
-
-              <!-- results -->
-
-              <div class="schedule">
-                <h2>My Schedule</h2>
-              </div>
+            <div class="profile">
+              <img src="" alt="profile" srcset="" id="welcome-profile" />
             </div>
           </div>
-          <!-- dashboard -->
-        </div>
-        <!-- home -->
-        <div class="display-data" id="display-courses">
-          <div class="search">
-            <input type="search" name="search" id="search" placeholder="Search" />
-          </div>
-          <div class="courses">
-            <div class="all-courses"></div>
-          </div>
+          <!-- welcome -->
 
-          <!-- data will entry by js -->
+          <div class="details">
+            <div class="results">
+              <div class="result-detail" id="result-detail">
+                <div class="result-option">
+                  <h2>Results</h2>
+                  <div class="full-result">Full results -></div>
+                </div>
+                <!-- result -->
+              </div>
+
+              <!-- result-details  -->
+              <div class="br-line"></div>
+
+              <div class="my-courses">
+                <div class="head">
+                  <h2>My Courses</h2>
+                  <div class="see-all">All -></div>
+                </div>
+                <div class="courses" id="my-courses">
+                  <!-- data in User.js -->
+                </div>
+                <!-- my courses -->
+              </div>
+            </div>
+
+            <!-- results -->
+
+            <div class="schedule">
+              <h2>My Schedule</h2>
+            </div>
+          </div>
         </div>
-        <!-- courses -->
-        <div class="display-data" id="display-quiz">quiz</div>
-        <!-- quiz -->
-        <div class="display-data" id="display-projects">projects</div>
-        <!-- projects -->
+        <!-- dashboard -->
+      </div>
+      <!-- home -->
+      <div class="display-data" id="display-courses">
+        <div class="search">
+          <input type="search" name="search" id="search" placeholder="Search" />
+        </div>
+        <div class="courses">
+          <div class="all-courses"></div>
+        </div>
+
+        <!-- data will entry by js -->
+      </div>
+      <!-- courses -->
+      <div class="display-data" id="display-quiz">quiz</div>
+      <!-- quiz -->
+      <div class="display-data" id="display-projects">projects</div>
+      <!-- projects -->
+    </div>
+  </div>
+  <!-- container -->
+
+  <div class="edit-profile" id="edit-profile">
+    <div class="edit-form">
+      <div class="back">
+        <i class="fa-solid fa-circle-left"></i>
+      </div>
+      <h1>Edit Your Detail</h1>
+      <div class="profile-image">
+        <div class="image">
+          <img src="./assets/icons/94a65614997aeace.jfif" alt="" srcset="">
+        </div>
+        <div class="select-image">
+          <input type="file" name="profile" id="profile-image">
+        </div>
+      </div>
+      <!-- profile image -->
+      <div class="edit-username">
+        <input type="text" name="username" value="DomAK" id="edit-username">
+      </div>
+      <!-- username -->
+      <div class="edit-email">
+        <input type="email" name="email" value="domak@gmail.com" id="edit-email">
+      </div>
+      <!-- email -->
+      <div class="save-change">
+        <input type="button" value="Save Changes" id="save-change">
       </div>
     </div>
-    <script type="module" src="./index.js"></script>
+  </div>
+  <!-- edit profile -->
+  <script type="module" src="./index.js"></script>
 </body>
 
 </html>
