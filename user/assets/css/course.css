@@ -112,6 +112,10 @@ html, body{
     align-items: center;
 }
 
+.lesson-video iframe{
+    height: 100%;
+}
+
 .lesson-video .back{
     width: fit-content;
     margin: 10px;

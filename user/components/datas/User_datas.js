@@ -11,7 +11,8 @@ let users = [
       agreeNoti: "on",
     },
     progress_course: [],
-    finished_lessons: []
+    finished_lessons: [],
+    my_schedules: [],
   },
   {
     info: {
@@ -22,7 +23,8 @@ let users = [
       agreeNoti: "on",
     },
     progress_course: [],
-    finished_lessons: []
+    finished_lessons: [],
+    my_schedules: [],
   },
   {
     info: {
@@ -33,7 +35,8 @@ let users = [
       agreeNoti: "on",
     },
     progress_course: [],
-    finished_lessons: []
+    finished_lessons: [],
+    my_schedules: [],
   },
   {
     info: {
@@ -44,7 +47,8 @@ let users = [
       agreeNoti: "on",
     },
     progress_course: [],
-    finished_lessons: []
+    finished_lessons: [],
+    my_schedules: [],
   },
   {
     info: {
@@ -55,7 +59,8 @@ let users = [
       agreeNoti: "on",
     },
     progress_course: [],
-    finished_lessons: []
+    finished_lessons: [],
+    my_schedules: [],
   },
   {
     info: {
@@ -66,7 +71,8 @@ let users = [
       agreeNoti: "on",
     },
     progress_course: [],
-    finished_lessons: []
+    finished_lessons: [],
+    my_schedules: [],
   },
 ];
 users.forEach( user => {

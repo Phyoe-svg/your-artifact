@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+    <style>
+        *{
+            width: 100%;
+            margin: auto;
+        }
+
+        html, body{
+            height: 100%;
+        }
+
+        .container{
+            height: 100%;
+        }
+
+        .container .mail{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mail">
+            <div class="time">12</div>
+            <div class="name">System</div>
+            <div class="code">1234</div>
+        </div>
+    </div>
+    <script>
+        const time = document.querySelector(".mail .time");
+        time.innerHTML = new Date().toTimeString();;
+    </script>
+</body>
+</html>

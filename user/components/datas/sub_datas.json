@@ -1,11 +1,6 @@
-import db from "../Model.js";
-
-const course = new db.course();
-
-course.insert({
+{
     "info": {
         "course_id": 0,
-        "imgURL": "./assets/images/js.png",
         "title": "JavaScript",
         "aurthor": "WaifarKolar( Brighter Myanmar )",
         "info": "A course what'll up you to the next level of intermediate from beginner.",
@@ -553,9 +548,4 @@ course.insert({
             "description": "Set"
         }
     ]
-})
-
-// course.commit();
-
-const courses = course.getAll();
-export default courses;
+}

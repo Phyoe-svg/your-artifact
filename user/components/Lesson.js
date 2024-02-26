@@ -17,7 +17,7 @@ const Video = (id, videoURL)=>{
   video.className = "video";
   next.className = "next";
 
-  // video.innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/0Fe7Z8baqZ8?si=2x8c65y-tWCZ5qmK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+  video.innerHTML = videoURL;
   // append to respective parent
   lesson_video.appendChild(back);
   lesson_video.appendChild(video);

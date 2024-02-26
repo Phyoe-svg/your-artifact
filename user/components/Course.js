@@ -43,7 +43,7 @@ const Course = ({
   card.innerHTML = `<div class="image" id="${id}">
   <img src="${imgURL}" alt="" srcset="">
 </div>
-<div class="title">${title} - <small style="color: white; font-family: monospace; display: block;">${aurthor}</small></div>
+<div class="title">${title} - <small>${aurthor}</small></div>
 <div class="info">${info}</div>
 <div class="rating">${rating}/10</div>
 <div class="course-level">${level}</div>`;
