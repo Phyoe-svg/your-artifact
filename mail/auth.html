@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Sign up here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="auth">
+            <div class="sign-up" id="sign-up">
+                <h1>Let's Connect</h1>
+                <div class="username">
+                    <label for="username">Enter your username *</label>
+                    <input type="text" name="username" id="username" required>
+                </div>
+                <div class="mail">
+                    <label for="mail">Choose a mail (e.g - example@audrey.tulip )* <small id="same-mail"></small> </label>
+                    <input type="text" name="mail" id="mail">
+                </div>
+                <div class="password">
+                    <label for="password">Choose a password* </label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="re-password">
+                    <label for="re-password">Confirm your password* <small id="pass-match"></small></label>
+                    <input type="password" name="password" id="re-password">
+                </div>
+                <div class="signup-btn">
+                    <div class="term-check">
+                        <input type="checkbox" name="term-agree" id="term-agree">
+                    </div>
+                    <div class="term"><small>I agree with this term and condition</small></div>
+                    <button type="button" id="signup-btn">Sign Up</button>
+                </div>
+            </div>
+            <!-- sign up -->
+
+            <div class="login" id="login">
+                <h1>Welcome Back</h1>
+                <div class="mail">
+                    <label for="mail">Enter your mail* <small id="mail-format"></small> </label>
+                    <input type="text" name="mail" id="login-mail">
+                </div>
+                <div class="password">
+                    
+                    <label for="password">Enter your password* </label>
+                    <input type="password" name="password" id="login-password">
+                </div>
+                <div class="login-btn">
+                    <div id="register">Don't have an account yet?</div>
+                    <button type="button" id="login-btn">Login</button>
+                </div>
+            </div>
+            <!-- login -->
+        </div>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>

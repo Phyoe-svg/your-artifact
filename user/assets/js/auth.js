@@ -1,12 +1,12 @@
 import db from "../../components/Model.js";
 import users from "../../components/datas/User_datas.js";
 
-window.onload = ()=>{
-    const current_user = localStorage.getItem("current_user");
-    if( current_user ){
-        window.location.href = "/";
-    }
-}
+window.onload = () => {
+  const current_user = localStorage.getItem("current_user");
+  if (current_user) {
+    window.location.href = "/";
+  }
+};
 
 // playing between sign up and login
 // buttons
@@ -15,23 +15,23 @@ const login_btn = document.getElementById("login");
 const signup = document.querySelector(".container .signup");
 const login = document.querySelector(".container .login");
 
-signup_btn.addEventListener("click", (e)=>{
-  signup.style.display = 'flex';
-})
+signup_btn.addEventListener("click", (e) => {
+  signup.style.display = "flex";
+});
 
-login_btn.addEventListener("click", (e)=>{
-  login.style.display = 'flex';
-})
+login_btn.addEventListener("click", (e) => {
+  login.style.display = "flex";
+});
 
 // back to main
 const back_login = document.querySelector(".login .back");
 const back_singup = document.querySelector(".signup .back");
-back_login.addEventListener("click", (e)=>{
-  login.style.display = 'none';
-})
-back_singup.addEventListener("click", (e)=>{
-  signup.style.display = 'none';
-})
+back_login.addEventListener("click", (e) => {
+  login.style.display = "none";
+});
+back_singup.addEventListener("click", (e) => {
+  signup.style.display = "none";
+});
 
 // input validate and continue process
 const inputs = document.querySelectorAll(".signup input");
@@ -56,9 +56,12 @@ inputs.forEach((input) => {
       }
       if (email_exit.length === 0) {
         email_exits.innerHTML = "";
-        if (input.value.endsWith("@gmail.com")) {
+        if (
+          input.value.endsWith("@gmail.com") ||
+          input.value.endsWith("@audrey.tulip")
+        ) {
           continues.disabled = false;
-        }else{
+        } else {
           continues.disabled = true;
         }
       }
@@ -80,7 +83,7 @@ continues.addEventListener("click", (e) => {
         agreeNoti: inputs[3].value,
       },
       progress_course: [],
-      finished_lessons: []
+      finished_lessons: [],
     };
     const user = new db.user();
     user.insert(new_user);
@@ -95,26 +98,34 @@ continues.addEventListener("click", (e) => {
 // login
 const account_login = document.getElementById("login-login-btn");
 const email = document.querySelector(".login #email");
-email.addEventListener("input", ()=>{
+email.addEventListener("input", () => {
   const validate = document.querySelector(".login-email small");
-  if( !email.value.endsWith("@gmail.com")){
+  if (
+    email.value.endsWith("@gmail.com") ||
+    email.value.endsWith("@audrey.tulip")
+  ) {
+    validate.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    validate.style.color = "green";
+  } else {
     validate.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
     validate.style.color = "red";
-  }else{
-    validate.innerHTML= `<i class="fa-solid fa-check"></i>`;
-    validate.style.color = "green";
   }
-})
-account_login.addEventListener("click", (e)=>{
+});
+account_login.addEventListener("click", (e) => {
   e.preventDefault();
   const email = document.querySelector(".login #email");
   const password = document.querySelector(".login #password");
 
-  const user_exists = Object.values(users).filter( user=> {
-    if( user.info.email === email.value && user.info.password === password.value){
+  const user_exists = Object.values(users).filter((user) => {
+    if (
+      user.info.email === email.value &&
+      user.info.password === password.value
+    ) {
       localStorage.setItem("current_user", JSON.stringify(user));
       window.location.href = "/user";
     }
   });
-  document.getElementById("error").innerHTML = "Email or Password Incorrect";
-})
+  if( user_exists.length === 0){
+    document.getElementById("error").innerHTML = "Email or Password Incorrect";
+  }
+});

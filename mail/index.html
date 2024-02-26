@@ -4,36 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mail</title>
-    <style>
-        *{
-            width: 100%;
-            margin: auto;
-        }
-
-        html, body{
-            height: 100%;
-        }
-
-        .container{
-            height: 100%;
-        }
-
-        .container .mail{
-            display: flex;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="mail">
-            <div class="time">12</div>
-            <div class="name">System</div>
-            <div class="code">1234</div>
+        <div class="mail-addr">domak@tulip.audrey</div>
+         <h1>Mail List</h1>
+        <div class="mail-list" id="mail-list">
+            <!-- <div class="mail">
+                <div class="from">System</div>
+                <div class="code">Code - 1234</div>
+                <div class="time">10: 30 am</div>
+            </div>
+            <div class="mail">
+                <div class="from">System</div>
+                <div class="code">Code - 2004</div>
+                <div class="time">09: 30 am</div>
+            </div> -->
         </div>
     </div>
-    <script>
-        const time = document.querySelector(".mail .time");
-        time.innerHTML = new Date().toTimeString();;
-    </script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
