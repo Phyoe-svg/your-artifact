@@ -42,3 +42,24 @@ if (new_user) {
 }
 
 Show_schedule();
+
+// close edit form btn
+const edit_form_close = document.getElementById("close-edit-form");
+edit_form_close.addEventListener("click", (e)=>{
+  const edit_profile = document.getElementById("edit-profile");
+  edit_profile.style.display = "none";
+})
+
+// upload form show
+const upload_porject = document.getElementById("upload-project");
+const is_upload = document.getElementById("is-upload");
+
+is_upload.addEventListener("click", ()=>{
+  if( upload_porject.style.display === "flex" ){
+    upload_porject.style.display = "none";
+    is_upload.innerText = "Upload Project";
+  }else{
+    upload_porject.style.display = "flex";
+    is_upload.innerText = "Close";
+  }
+})

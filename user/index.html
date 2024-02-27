@@ -116,23 +116,7 @@
               <h2>My Schedule</h2>
               <div class="my-schedules">
                 <div class="schedules" id="schedules">
-                  <!-- <div class="task primary">
-                    <div class="name">Sleep</div>
-                    <div class="hr">7 hr</div>
-                  </div> -->
-                  <!-- primary -->
-
-                  <!-- <div class="task secondary">
-                    <div class="name">Sleep</div>
-                    <div class="hr">7 hr</div>
-                  </div> -->
-                  <!-- secondary -->
-
-                  <!-- <div class="task normal">
-                    <div class="name">Sleep</div>
-                    <div class="hr">7 hr</div>
-                  </div> -->
-                  <!-- normal -->
+                  <!-- schedule are here -->
                 </div>
                 <!-- schedules -->
                 <div class="add-schedule">
@@ -165,7 +149,36 @@
       <!-- courses -->
       <div class="display-data" id="display-quiz">quiz</div>
       <!-- quiz -->
-      <div class="display-data" id="display-projects">projects</div>
+      <div class="display-data" id="display-projects">
+        <div class="is-upload" id="is-upload">Upload Project</div>
+        <div class="upload-project" id="upload-project">
+          <h2>Upload Your Project</h2>  
+          <div class="project-file">
+              <label for="project">Select your project* </label>
+              <input type="file" name="project" id="project">
+              <label for="description">Project description* </label>
+              <textarea name="project-des" id="description"></textarea>
+              <input type="button" value="Upload Project" id="upload">
+            </div>
+            
+        </div>
+        <!-- upload area  -->
+        <div class="projects">
+          <div class="project">
+            <div class="title">Online Shopping</div>
+            <div class="screen-shot"><img src="./assets/images/back1.jpeg" alt="" srcset=""></div>
+            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci animi nulla
+              aspernatur optio! Aspernatur praesentium corrupti error, nesciunt dolorem rem impedit magni corporis optio
+              rerum architecto. Nemo, ab! Pariatur, vero!</div>
+            <div class="option">
+              <div class="live">View</div>
+              <div class="download">Download</div>
+            </div>
+          </div>
+          <!-- project card` -->
+        </div>
+        <!-- projects -->
+      </div>
       <!-- projects -->
     </div>
   </div>
@@ -173,8 +186,8 @@
 
   <div class="edit-profile" id="edit-profile">
     <div class="edit-form">
-      <div class="back">
-        <i class="fa-solid fa-circle-left"></i>
+      <div class="back" id="close-edit-form">
+        <i class="fa-solid fa-arrow-left"></i>
       </div>
       <h1>Edit Your Detail</h1>
       <div class="profile-image">

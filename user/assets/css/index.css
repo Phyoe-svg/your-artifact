@@ -148,6 +148,7 @@ html, body{
 .container .display{
     width: 100%;
     height: 100%;
+    padding-top: 0;
     background-color: var(--display-light);
 }
 
@@ -155,6 +156,7 @@ html, body{
 .display .display-data{
     display: none;
     color: white;
+    margin-top: -10px;
 }
 
 .display #display-home{
@@ -600,8 +602,123 @@ html, body{
     background-color: rgb(151, 52, 52);
 }
 .display #display-projects{
-    background-color: rgb(25, 146, 14);
+    background-color: var(--secondary-light);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
+
+.is-upload{
+    background-color: var(--color-dark);
+    color: white;
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.is-upload:hover{
+    background-color: var(--primary-light);
+    color: var(--color-dark);
+}
+
+.upload-project{
+    display: none;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.427);
+    flex-direction: column;
+}
+.upload-project :where(div, label, textarea, input){
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.upload-project input[type=button]{
+    width: 50%;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* project upload form */
+
+.projects{
+    height: 50%;
+    overflow: scroll;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .project{
+    width: 20%;
+    height: 300px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--color-dark);
+    background-color: white;
+}
+
+.project .title{
+    font-size: 1,5em;
+    font-weight: bold;
+    height: 10%;
+}
+.project .screen-shot{
+    width: 100%;
+    height: 50%;
+}
+
+.screen-shot img{
+    width: 100%;
+    height: 100%;
+}
+
+.project .description{
+    height: 25%;
+    overflow: scroll;
+    font-size: 0.7em;
+}
+
+.project .option{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin: 10px auto;
+}
+
+.project .option div{
+    width: 40%;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.451);
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.project .option div:hover{
+    transition: 0.3s ease-in;
+    background-color: wheat;
+}
+
+/* show-project */
 /* display project */
 
 .edit-profile {
@@ -626,6 +743,21 @@ html, body{
     width: fit-content;
     color: rgb(157, 181, 167);
     font-family: 'Courier New', Courier, monospace;
+}
+
+.edit-form .back{
+    margin-left: 0;
+}
+
+.edit-form .back i{
+    color: white;
+    font-size: 2em;
+    width: 100%;
+}
+
+.edit-form .back:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .edit-form:hover{
