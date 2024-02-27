@@ -1,5 +1,9 @@
 import db from "./Model.js";
+import new_user from "./exist_user.js";
 
+window.onload = ()=>{
+  localStorage.getItem("mail") === "{}" ? new_user.commit(): "";
+}
 const user = new db.user();
 const username = document.getElementById("username");
 const mail = document.getElementById("mail");

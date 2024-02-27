@@ -1,6 +1,7 @@
 import db from "../Model.js";
-const course = new db.course();
-course.insert({
+
+const courses = new db.course();
+courses.insert({
   info: {
     course_id: 0,
     imgURL: "./assets/images/js.png",
@@ -630,4 +631,4 @@ course.insert({
   ],
 });
 
-export default course;
+export default courses;

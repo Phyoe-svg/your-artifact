@@ -1,10 +1,10 @@
 import db from "../../components/Model.js";
-import users from "../../components/datas/User_datas.js";
-import commitDatas from "../../components/datas/LoadDatas.js";
-
+import commitDatas from "./LoadDatas.js";
+let users;
 window.onload = () => {
   const current_user = localStorage.getItem("current_user");
   localStorage.getItem("learning") === "{}" ? commitDatas() : "";
+  users = new db.user().getAll();
   if (current_user) {
     window.location.href = "/";
   }
@@ -86,7 +86,7 @@ continues.addEventListener("click", (e) => {
       },
       progress_course: [],
       finished_lessons: [],
-      my_schedules: []
+      my_schedules: [],
     };
     const user = new db.user();
     user.insert(new_user);

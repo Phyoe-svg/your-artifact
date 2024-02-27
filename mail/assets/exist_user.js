@@ -26,4 +26,4 @@ console.log(new_user.insert({
 //     },
 //     otp: [],
 // })
-// new_user.commit()
+export default new_user;
