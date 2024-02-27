@@ -55,12 +55,13 @@ html, body{
 .container .auth{
     height: 100%;
     display: flex;
-    background-image: url(./images/rodion-kutsaiev-OaulMnhSitY-unsplash.jpg);
+    background-image: url(./images/mail.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
 }
+
 
 .sign-up{
     display: none;
@@ -79,7 +80,7 @@ html, body{
 }
 
 .sign-up h1, .login h1{
-    color: rgb(58, 44, 44);
+    color: wheat;
 }
 
 .sign-up label, .login label{

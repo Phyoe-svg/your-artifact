@@ -555,7 +555,6 @@ course.insert({
     ]
 })
 
-// course.commit();
 
 const courses = course.getAll();
 export default courses;

@@ -1,8 +1,10 @@
 import db from "../../components/Model.js";
 import users from "../../components/datas/User_datas.js";
+import commitDatas from "../../components/datas/LoadDatas.js";
 
 window.onload = () => {
   const current_user = localStorage.getItem("current_user");
+  localStorage.getItem("learning") === "{}" ? commitDatas() : "";
   if (current_user) {
     window.location.href = "/";
   }
@@ -84,6 +86,7 @@ continues.addEventListener("click", (e) => {
       },
       progress_course: [],
       finished_lessons: [],
+      my_schedules: []
     };
     const user = new db.user();
     user.insert(new_user);
@@ -125,7 +128,7 @@ account_login.addEventListener("click", (e) => {
       window.location.href = "/user";
     }
   });
-  if( user_exists.length === 0){
+  if (user_exists.length === 0) {
     document.getElementById("error").innerHTML = "Email or Password Incorrect";
   }
 });
