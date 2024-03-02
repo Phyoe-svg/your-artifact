@@ -18,7 +18,7 @@ add.addEventListener("click", (e) => {
   const name = document.getElementById("schedule-name");
   const hr = document.getElementById("schedule-hr");
 
-  if (name.value === "" || (hr.value === "" && hr.value >= 1)) {
+  if (name.value === "" || hr.value === "" ) {
     alert("Please be sure your input are valid");
   } else {
      current_user.my_schedules.push({ name: name.value, hr: hr.value });
