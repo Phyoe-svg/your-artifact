@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Test your knowledge</title>
+    <style>
+        * {
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: rgb(178, 209, 178);
+        }
+
+        .container {
+            height: 100%;
+        }
+
+        .container .quiz {
+            width: 90%;
+            padding: 10px;
+            background-color: rgba(190, 221, 199, 0.788);
+            margin: 10px auto;
+        }
+
+        .quiz .answers {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .quiz .answers .answer {
+            width: fit-content;
+            padding: 10px;
+            background-color: rgba(247, 244, 239, 0.601);
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .quiz .answers .answer:hover{
+            background-color: rgb(10, 73, 116);
+            color: white;
+        }
+
+        .answer :where(label, input) {
+            display: block;
+            margin: 0 10px 0 10px;
+        }
+
+        .result{
+            width: 90%;
+            padding: 20px;
+            background-color: rgb(160, 222, 193);
+            position: sticky;
+            top: 0;
+            display: flex;
+        }
+
+        .result .total-point{
+            width: fit-content;
+        }
+
+        .result .mistake{
+            padding: 10px;
+            width: fit-content;
+            border-radius: 20px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .mistake:hover{
+            background-color: wheat;
+            color: white;
+        }
+
+        .confirm{
+            width: 90%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-right: 10%;
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        .confirm:hover{
+            transition: 0.3s ease-out;
+            transform: scale(1.1);
+        }
+        .mistake-show{
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: rgb(238, 231, 231);
+            overflow: scrollz;
+        }
+
+        .mistake-show div{
+            background-color: rgba(255, 0, 0, 0.559);
+            padding: 10px;
+            margin: 1px auto;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="result">
+            <div class="total-point">
+                Total: <b id="point">0/10</b>
+            </div>
+            <div class="mistake" id="mistakes">Show Mistake</div>
+        </div>
+    </div>
+    <script type="module" src="../components/quiz.js"></script>
+</body>
+
+</html>

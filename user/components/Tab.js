@@ -4,9 +4,9 @@ const display = document.getElementById("display");
 
 window.onload = () => {
   // if user is new, it'll set default tab to home and it'll track user last tab id
-    (localStorage.getItem("current_tab") === null
-      ? localStorage.setItem("current_tab", "display-home")
-      : "");
+    if (localStorage.getItem("current_tab") === null ) {
+       localStorage.setItem("current_tab", "display-home")
+    }
   document.getElementById(localStorage.getItem("current_tab")).style.display = "block";
 };
 // get the tabs

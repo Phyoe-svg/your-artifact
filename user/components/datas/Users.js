@@ -10,6 +10,7 @@ let users = [
     progress_course: [],
     finished_lessons: [],
     my_schedules: [],
+    finished_quiz: [],
   },
   {
     info: {
@@ -22,6 +23,7 @@ let users = [
     progress_course: [],
     finished_lessons: [],
     my_schedules: [],
+    finished_quiz: [],
   },
   {
     info: {
@@ -34,6 +36,7 @@ let users = [
     progress_course: [],
     finished_lessons: [],
     my_schedules: [],
+    finished_quiz: [],
   },
   {
     info: {
@@ -46,6 +49,7 @@ let users = [
     progress_course: [],
     finished_lessons: [],
     my_schedules: [],
+    finished_quiz: [],
   },
   {
     info: {
@@ -58,6 +62,7 @@ let users = [
     progress_course: [],
     finished_lessons: [],
     my_schedules: [],
+    finished_quiz: [],
   },
   {
     info: {
@@ -70,6 +75,7 @@ let users = [
     progress_course: [],
     finished_lessons: [],
     my_schedules: [],
+    finished_quiz: [],
   },
 ];
 

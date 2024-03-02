@@ -87,6 +87,7 @@ continues.addEventListener("click", (e) => {
       progress_course: [],
       finished_lessons: [],
       my_schedules: [],
+      finished_quiz: [],
     };
     const user = new db.user();
     user.insert(new_user);

@@ -83,6 +83,7 @@ class Course extends Model {}
 class Lesson extends Model {}
 class MyLesson extends Model {}
 class Project extends Model {}
+class Quiz extends Model {}
 const db = {
   user: User,
   myCourse: MyCourse,
@@ -90,6 +91,7 @@ const db = {
   lesson: Lesson,
   myLesson: MyLesson,
   projects: Project,
+  quiz: Quiz,
   current_user: JSON.parse(localStorage.getItem("current_user")),
 };
 export default db;
