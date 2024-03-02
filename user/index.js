@@ -1,6 +1,7 @@
 import "./components/Tab.js";
 import "./components/datas/User_datas.js";
 import "./components/User.js";
+import "./components/Project.js";
 import Course from "./components/Course.js";
 import courses from "./components/datas/Course_datas.js";
 import "./components/edit_profile.js";
@@ -10,7 +11,6 @@ import Show_schedule from "./components/schedule_input.js";
 // add course to course section
 const all_courses = document.querySelector(".all-courses");
 const search = document.getElementById("search");
-
 Object.values(courses).forEach((course) => {
   all_courses.appendChild(Course(course.info));
 });

@@ -148,8 +148,9 @@ html, body{
 .container .display{
     width: 100%;
     height: 100%;
+    overflow: scroll;
     padding-top: 0;
-    background-color: var(--display-light);
+    background-color: var(--secondary-light);
 }
 
 
@@ -657,9 +658,9 @@ html, body{
 /* project upload form */
 
 .projects{
-    height: 50%;
-    overflow: scroll;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -669,6 +670,7 @@ html, body{
     width: 20%;
     height: 300px;
     padding: 10px;
+    margin: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px var(--color-dark);
     background-color: white;

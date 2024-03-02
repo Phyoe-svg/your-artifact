@@ -13,11 +13,14 @@ const Project = ({
     <div class="screen-shot"><img src="${screenshot}" alt="" srcset=""></div>
     <div class="description">${description}</div>
     <div class="option">
-      <a href="/projects/${live_at}"><div class="live">View</div></a>
-      <a href="/projects/source/${download_link}><div class="download">Download</div></a>
+      <div class="live"><a href="${live_at}">Live</a></div>
+      <div class="download"><a href="${download_link}">Download</a></div>
     </div>`;
   return project;
 };
 
+const project_section = document.getElementById("projects-section");
 const projects = new db.projects();
-projects.insert({})
+Object.values(projects.getAll()).forEach( project => {
+  project_section.appendChild(Project( project ));
+})
