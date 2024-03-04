@@ -39,6 +39,8 @@ back_singup.addEventListener("click", (e) => {
 const inputs = document.querySelectorAll(".signup input");
 const email_exits = document.getElementById("email-exists");
 const continues = document.getElementById("continue");
+const username_error = document.getElementById("username-error");
+const password_error = document.getElementById("password-error");
 
 const next_inputs = [
   document.querySelector("form .username"),
@@ -55,6 +57,7 @@ inputs.forEach((input) => {
       if (email_exit.length > 0) {
         email_exits.style.color = "red";
         email_exits.innerHTML = "Email Already Taken";
+        continues.disabled = true;
       }
       if (email_exit.length === 0) {
         email_exits.innerHTML = "";
@@ -67,6 +70,34 @@ inputs.forEach((input) => {
           continues.disabled = true;
         }
       }
+      if (Number(input.value[0]) >= 0) {
+        email_exits.style.color = "red";
+        email_exits.innerHTML = "Email must be start with character";
+        continues.disabled = true;
+      }
+    }
+    if (input.name === "username") {
+      if (Number(input.value[0]) >= 0 || input.value.length < 4) {
+        console.log(input.value.length);
+        username_error.style.color = "red";
+        username_error.innerText =
+          "Username must be start with character and greater than 4 character long";
+        continues.disabled = true;
+      } else {
+        username_error.innerText = "";
+        continues.disabled = false;
+      }
+    }
+
+    if (input.name === "password") {
+      if (input.value.length < 8) {
+        password_error.style.color = "red";
+        password_error.innerText = "Password must be greater than 8";
+        continues.disabled = true;
+      } else {
+        password_error.innerText = "";
+        continues.disabled = false;
+      }
     }
   });
 });
@@ -74,6 +105,10 @@ let track = 0;
 continues.addEventListener("click", (e) => {
   if (next_inputs.length > track) {
     next_inputs[track].style.display = "block";
+    continues.disabled = true;
+  }
+  if (next_inputs.length - 1 === track) {
+    continues.disabled = false;
   }
   if (track === next_inputs.length) {
     const new_user = {
