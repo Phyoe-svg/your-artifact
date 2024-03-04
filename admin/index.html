@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <script src="https://kit.fontawesome.com/04be286e27.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Admin Dashboard</h1>
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+            <div class="logout" id="logout">Logout</div>
+        </div>
         <div class="options">
             <div class="manage-course" id="manage-course">Manage Course</div>
             <div class="manage-user" id="manage-user">Manage User</div>
@@ -59,6 +63,7 @@
         </div>
         <!-- manage section with related datas -->
         <div class="add-course" id="add-new-course-section">
+            <div class="left"><i class="fa-solid fa-arrow-left" id="dashboard"></i></div>
             <h1>Add New Course</h1>
             <div class="course-inputs">
                 <div class="course-info">
@@ -85,6 +90,18 @@
             <input type="button" value="Add this Course" id="add-course" class="add-course-btn">
         </div>
         <!--add new course -->
+        <div class="auth" id="auth">
+            <div class="form">
+                <h1>Welcome</h1>
+                <small id="error"></small>
+                <label for="username">Username*</label>
+                <input type="text" name="username" id="username">
+                <label for="password">Password*</label>
+                <input type="password" name="password" id="password">
+                <input type="button" value="Login" id="login">
+            </div>
+        </div>
+        <!-- auth -->
     </div>
     <script src="./app.js" type="module"></script>
 </body>

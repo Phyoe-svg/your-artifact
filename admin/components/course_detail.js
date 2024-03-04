@@ -28,7 +28,7 @@ const Course_detail = ({ course_id, title, count_lesson }) => {
   course.appendChild(course_id_);
   course.appendChild(title_);
   course.appendChild(lesson_count_);
-  action.appendChild(edit);
+  // action.appendChild(edit);
   action.appendChild(delete_course);
   course.appendChild(action);
 

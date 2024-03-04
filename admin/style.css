@@ -17,6 +17,24 @@ html, body{
 }
 /* container */
 
+.container .header{
+    display: flex;
+}
+.header h1{
+    width: 100%;
+}
+.header .logout{
+    width: fit-content;
+    text-align: right;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+.logout:hover{
+    color: black;
+}
+
 .options{
     display: flex;
     flex-direction: row;
@@ -148,6 +166,16 @@ html, body{
     flex-direction: column;
 }
 
+.add-course .left{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.left i{
+    font-size: 1.5em;
+    color: white;
+}
+
 .add-course h1{
     margin: 0;
     color: white;
@@ -208,3 +236,41 @@ input[type=button]{
 }
 
 /* new course section */
+.container .auth{
+    background-color: rgb(212, 204, 204);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.auth .form{
+    width: 60%;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: wheat;
+}
+
+.form h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: fit-content;
+}
+.form input{
+    margin: 5px auto;
+    padding: 5px;
+    border: none;
+    background-color: white;
+}
+
+.form input[type=button]{
+    width: 90%;
+    display: block;
+    border-radius: 20px;
+    font-weight: bold;
+}
+@media screen and (max-width: 600px){
+    .container .form{
+        width: 90%;
+    }
+}
+/* auth */
