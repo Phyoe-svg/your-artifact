@@ -1,4 +1,5 @@
 import db from "./Model.js";
+import quiz_datas from "./datas/quiz_datas.js";
 
 window.onload = ()=>{
   if(localStorage.getItem("current_user") === null ){
@@ -6,72 +7,8 @@ window.onload = ()=>{
   }
 }
 const quiz = new db.quiz();
-const current_quiz = 1;
-const quiz_datas = {
-  title: "Python",
-  questions: [
-    {
-      id: 0,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 1,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 2,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 3,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 4,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 5,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 6,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 7,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 8,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-    {
-      id: 9,
-      question: "What's compiler?",
-      answer: "Converter of Code",
-      choices: ["Converter of Code", "Editor", "Tester"],
-    },
-  ],
-};
+const current_quiz = Number(localStorage.getItem("current-quiz"));
+
 // quiz.remove(0);
 quiz.insert(quiz_datas);
 // quiz.commit()
@@ -165,3 +102,5 @@ mistake.addEventListener("click", (e)=>{
   }
   container.appendChild(mistake_show);
 })
+
+

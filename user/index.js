@@ -63,3 +63,17 @@ is_upload.addEventListener("click", ()=>{
     is_upload.innerText = "Close";
   }
 })
+
+// add quiz 
+const quizs = new db.quiz().getAll();
+const quiz_section = document.getElementById("quiz-section");
+Object.values(quizs).forEach( quiz => {
+  const quiz_div = document.createElement("div");
+  quiz_div.className = "quiz-name";
+  quiz_div.innerText = quiz.title;
+  quiz_div.addEventListener("click", ()=>{
+    localStorage.setItem("current-quiz", quiz.id);
+    window.location.href = "/user/templates/quiz.html";
+  })
+  quiz_section.appendChild(quiz_div);
+})
