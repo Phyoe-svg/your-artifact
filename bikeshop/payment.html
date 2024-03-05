@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now Page</title>
+
+    <style>
+        * {
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container {
+            height: 100%;
+            background-color: rgb(141, 185, 226);
+        }
+
+        .container .header {
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+
+        /* header */
+
+        .body {
+            display: flex;
+            padding: 30px;
+            margin: 1px;
+        }
+
+        .body .ur-cart {
+            /* border: 1px solid black; */
+            width: 30%;
+            height: 400px;
+            text-align: left;
+        }
+
+        /* ur cart */
+
+        .body .delivery-time {
+            border: 1px solid black;
+            width: 30%;
+            height: 400px;
+            text-align: left;
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+
+        .delivery-time h2 {
+            text-align: center;
+        }
+
+        .container :where(.your-cart, .delivery-time) {
+            margin: 20px;
+        }
+
+        .delivery-time #ords {
+            text-align: center;
+        }
+        /* delivery time */
+
+        button{
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 30px auto;
+            /* background-color: rgb(4, 109, 207); */
+        }
+        /* confirm */
+
+        .payment {
+            display: flex;
+            text-align: center;
+        }
+
+        .payment .wave {
+            border: 1px solid black;
+            border-radius: 1px;
+            width: 40%;
+            margin: 20px;
+            background-color: yellow;
+            color: black;
+        }
+
+        .payment .kpay {
+            border: 1px solid black;
+            border-radius: 1px;
+            width: 40%;
+            margin: 20px;
+            background-color: rgb(11, 112, 227);
+            color: black;
+        }
+        /* payment */
+
+        .footer {
+            text-align: center;
+            background-color: gray;
+            color: white;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .footer small {
+            justify-content: center;
+        }
+        /* footer */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Order Now</h1>
+        </div>
+        <div class="body">
+            <div class="ur-cart">
+                <h2>Delivery Time</h2>
+                <br>
+                <div class="product">
+                    <span>- Within a week</span><br><br>
+                </div>
+
+                <h2>Payment Method</h2>
+                <div class="payment">
+                    <div class="wave">
+                        <div class="qr">
+                            <img src="./photos/wave.jpg">
+                        </div> Wave Pay
+                    </div>
+                    <div class="kpay">
+                        <div class="qr">
+                            <img src="./photos/kbz.jpg">
+                        </div>KBZ Pay
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="add">Address: <b id="address"></b></div> 
+                </div>
+            </div>
+
+            <div class="delivery-time">
+                <h2 id="ords">ORDER SUMMERY</h2><br>
+                <h3>Total Product Value</h3><br>
+                <div class="name">Name: <b id="name"></b></div><br>
+                <div class="qty">Quantity: <b id="quantity"></b></div><br>
+                <div class="df">Delivery Fee: <b>500000 ks</b></div><br><br>
+                <hr><br>
+
+                <div class="total-amount">Total Amount: <b id="total"></b> ks</div>
+
+                <button><div class="confirm" id="confirm">Confirm</div></button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Secone year (sec sem)</span><br>
+            <small><i>contact: yourartifact@gmail.com</i></small>
+        </div>
+    </div>
+    <script>
+        const user = JSON.parse(localStorage.getItem("user"));
+        document.getElementById("name").innerText = user.name;
+        const order = JSON.parse(localStorage.getItem("order"));
+        document.getElementById("quantity").innerText = order.quantity;
+        document.getElementById("total").innerText = order.total + 500000;
+        document.getElementById("address").innerText = user.address;
+
+        document.getElementById("confirm").addEventListener("click", () => {
+            localStorage.removeItem("cart");
+            localStorage.removeItem("item");
+            localStorage.removeItem("order");
+            window.location.href = "./index_sample.html";
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/70919deadf.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: scroll;
+        }
+
+        .container {
+            height: 100%;
+        }
+
+        .container .header {
+            display: flex;
+            background-color: rgb(4, 109, 207);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50px;
+        }
+
+        .header i {
+            width: 5%;
+        }
+
+        /* header */
+
+        .body {
+            background-color: whitesmoke;
+        }
+
+        .body .all-bikes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .discount-item h3 {
+            margin: 10px;
+        }
+
+        .discount-item {
+            background-color: whitesmoke;
+            height: 100%;
+        }
+
+        .all-bikes .item {
+            width: 20%;
+            text-align: center;
+            box-shadow: 0 0 20px rgb(134, 81, 81);
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: rgba(61, 42, 42, 0.447);
+        }
+
+        .item .image {
+            height: 70%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .item .price {
+            color: white;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+
+        .price span {
+            color: rgb(247, 61, 61);
+            font-weight: 100;
+        }
+
+        .item:hover {
+            transition: 0.4s ease-out;
+            transform: scale(1.1);
+            cursor: pointer;
+            box-shadow: 0 0 10px black;
+        }
+
+        /* body */
+
+        .footer {
+            text-align: center;
+            background-color: gray;
+            color: white;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .footer small {
+            justify-content: center;
+        }
+
+        /* footer */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fa-solid fa-arrow-left" id="left"></i>
+            <p>Your Favorite Bkies</p>
+        </div>
+
+        <div class="body">
+            <h3>Favourite Bikes</h3>
+            <div class="all-bikes" id="all-bikes">
+
+            </div>
+        </div>
+        <div class="footer">
+            <span>Secone year (sec sem)</span><br>
+            <small><i>contact: yourartifact@gmail.com</i></small>
+        </div>
+
+        <script>
+            const fav_datas = localStorage.getItem('fav') === null ? [] : JSON.parse(localStorage.getItem("fav"));
+            const all = document.getElementById("all-bikes");
+            fav_datas.forEach(fav => {
+                all.innerHTML += `<div class="item">
+                    <div class="image">
+                        <img src="photos/${fav.imgURL[0]}" alt="" srcset="">
+                    </div>
+                    <div class="name">
+                        Name-${fav.name}<br>    
+                    </div>
+                    <div class="price">
+                        Price-${fav.price_rate} ks<br>
+                    </div>
+                </div>`;
+            })
+            const left = document.getElementById("left");
+            left.addEventListener("click", () => {
+                window.open("/index_sample.html", "blank_");
+            })
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .signup {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid gray;
+            background-color: white;
+        }
+
+        .signinput input[type="text"],
+        .signinput input[type="email"],
+        .signinput input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        .signbtn{
+            background-color: rgb(251, 100, 6);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .signbtn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup">
+        <h2>Login To Your Account</h2>
+        <form class="signinput" onsubmit="yesUser()">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="text" placeholder="Address" id="address" required>
+            <input type="submit" class="signbtn" value="Login"/>
+        </form>
+    </div>
+
+    <script>
+        if(localStorage.getItem("user") !== null ){
+            window.location.href = "./order.html";
+        }
+        const user = true;
+        function yesUser(){
+            localStorage.setItem("user", JSON.stringify({name: document.getElementById("username").value, mail: document.getElementById("email").value, address: document.getElementById("address").value}));
+        }
+    </script>
+
+</body>
+
+</html>

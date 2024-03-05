@@ -1,5 +1,4 @@
 import db from "./Model.js";
-import quiz_datas from "./datas/quiz_datas.js";
 
 window.onload = ()=>{
   if(localStorage.getItem("current_user") === null ){
@@ -9,9 +8,9 @@ window.onload = ()=>{
 const quiz = new db.quiz();
 const current_quiz = Number(localStorage.getItem("current-quiz"));
 
-// quiz.remove(0);
-quiz.insert(quiz_datas);
-// quiz.commit()
+// // quiz.remove(0);
+// quiz.insert(quiz_datas);
+// // quiz.commit()
 let choosen = {};
 quiz.getOne(current_quiz).questions.forEach((data) => {
   choosen[data.id] = false;

@@ -1,4 +1,5 @@
 import db from "./Model.js";
+import quiz from "./datas/quiz_datas.js";
 
 const display = document.getElementById("display");
 
@@ -6,6 +7,10 @@ window.onload = () => {
   // if user is new, it'll set default tab to home and it'll track user last tab id
     if (localStorage.getItem("current_tab") === null ) {
        localStorage.setItem("current_tab", "display-home")
+    }
+    const quizs = new db.quiz();
+    if( quizs.getAll() === undefined ){
+      quiz.commit();
     }
   document.getElementById(localStorage.getItem("current_tab")).style.display = "block";
 };

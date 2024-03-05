@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale%</title>
+    <script src="https://kit.fontawesome.com/70919deadf.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: scroll;
+        }
+
+        .container {
+            height: 60%;
+        }
+
+        .container .header {
+            display: flex;
+            background-color: gray;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header div,
+        .header h2 {
+            width: fit-content;
+            margin: 10px auto;
+        }
+
+        .header h2 {
+            color: gold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .header .brand {
+            color: rgb(4, 109, 207);
+            cursor: pointer;
+        }
+
+        .header .sale {
+            color: rgb(223, 19, 19);
+            cursor: pointer;
+        }
+
+        .header .user-options {
+            display: flex;
+        }
+
+        .user-options div {
+            margin: 10px;
+        }
+
+        #name{
+            cursor: pointer;
+        }
+        /* header section */
+
+
+        .letter h1,
+        p {
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+
+        .letter {
+            background-color: rgb(4, 109, 207);
+        }
+
+        /* letter */
+
+        .discount-item .all-bikes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .discount-item h3 {
+            margin: 10px;
+        }
+
+        .discount-item {
+            background-color: whitesmoke;
+            height: 100%;
+        }
+
+        .all-bikes .item {
+            width: 20%;
+            text-align: center;
+            box-shadow: 0 0 20px rgb(134, 81, 81);
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: rgba(61, 42, 42, 0.447);
+        }
+
+        .item .image {
+            height: 70%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .item .price {
+            color: white;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+
+        .price span {
+            color: rgb(247, 61, 61);
+            font-weight: 100;
+        }
+
+        .item:hover {
+            transition: 0.4s ease-out;
+            transform: scale(1.1);
+            cursor: pointer;
+            box-shadow: 0 0 10px black;
+        }
+        /* discount-items */
+
+        .footer {
+            text-align: center;
+            background-color: gray;
+            color: white;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .footer small {
+            justify-content: center;
+        }
+        /* footer */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 id="name">Speed-Riders</h2>
+            <!-- <div class="brand" id="brand">All Brands</div> -->
+            <div class="sale" id="sale">Sale%</div>
+
+            <div class="user-options">
+                <div class="user" id="to-acc">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="fav" id="to-fav">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="cart" id="to-cart-page">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+        </div>
+        <!-- header section -->
+
+        <div class="letter">
+            <h1>SALE at SPEED-RIDERS - A Few Brands Are Rapidly Reduced!</h1><br>
+            <p>Welcome to SPEED-RIDERS area.Here you can find discounted items from a few brands.</p>
+        </div>
+        <div class="discount-item">
+            <h3>Discount Items</h3>
+            <div class="all-bikes" id="all-bikes">
+                <div class="item">
+                    <div class="image">
+                        <img src="photos/scooterfront.jpeg" alt="" srcset="">
+                    </div>
+                    <div class="price">
+                        Original Price-5000000 ks<br>
+                        <span>(20% off)</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="photos/scooterfront.jpeg" alt="" srcset="">
+                    </div>
+                    <div class="price">
+                        Price-5000000 ks<br>
+                        <span>(20% off)</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="image">
+                        <img src="photos/scooterfront.jpeg" alt="" srcset="">
+                    </div>
+                    <div class="price">
+                        Price-5000000 ks<br>
+                        <span>(20% off)</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="photos/scooterfront.jpeg" alt="" srcset="">
+                    </div>
+                    <div class="price">
+                        Price-5000000 ks<br>
+                        <span>(20% off)</span>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="footer">
+            <span>Secone year (sec sem)</span><br>
+            <small><i>contact: yourartifact@gmail.com</i></small>
+        </div>
+    </div>
+
+
+    <script>
+
+        const to_cart_page = document.getElementById("to-cart-page");
+        to_cart_page.addEventListener("click", () => {
+            window.open("/order.html", "blank_");
+        })
+
+        const to_acc = document.getElementById("to-acc");
+        to_acc.addEventListener("click", () => {
+            window.open("/Login.html", "blank_");
+        })
+
+        const sale = document.getElementById("sale");
+        sale.addEventListener("click", () => {
+            window.open("/sale.html", "blank_");
+        })
+
+        const to_home = document.getElementById("name");
+        to_home.addEventListener("click", () => {
+            window.open("/index_sample.html", "blank_");
+        })
+    </script>
+</body>
+
+</html>

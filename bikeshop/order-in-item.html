@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order In Items</title>
+    <style>
+        * {
+            width: 100%;
+            margin: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container {
+            height: 100%;
+        }
+
+        .container .header {
+            background-color: orange;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* header */
+
+        .container .show-item {
+            background-color: aquamarine;
+            padding: 20px;
+            height: 50%;
+        }
+
+        .show-item .first-line {
+            display: flex;
+            width: 60%;
+            height: 20%;
+            padding: 20px;
+            /* border: 1px solid black; */
+        }
+
+        .show-item .no-art {
+            text-align: center;
+            width: 20%;
+            /* border: 3px solid white; */
+        }
+
+        .show-item .second-line {
+            display: flex;
+            width: 60%;
+            height: auto;
+            padding: 20px;
+            border: 1px solid blue;
+        }
+
+        .second-line .photo{
+            width: 50%;
+        }
+
+
+        .second-line .type{
+            width: 50%;
+        }
+        
+        img{
+            width: 100px;
+            height: 100px;
+            display: flex;
+        }
+
+        .show-item .third-line {
+            display: flex;
+            width: 60%;
+            height: 20%;
+            padding: 50px;
+            /* border: 1px solid blue; */
+        }
+
+        .show-item .price {
+            text-align: center;
+            width: 20%;
+            /* border: 3px solid green; */
+        }
+
+        /* show-item */
+
+        .button {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .button input {
+            width: 50%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .button #btn1 {
+            background-color: whitesmoke;
+        }
+
+        .button #btn2 {
+            background-color: orange;
+        }
+
+        /* button */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h2>Cart</h2>
+        </div>
+        <!-- header -->
+        <div class="show-item">
+            <div class="first-line">
+                <div class="your-cart">Your Cart:</div>
+                <div class="no-art">No Article</div>
+            </div>
+            
+            <div class="second-line">
+                <div class="photo">
+
+                </div>
+                <div class="type">Type:</div>
+            </div>
+            
+            <div class="third-line">
+                <div class="total">Total Amount:</div>
+                <div class="price">0.00ks</div>
+            </div>
+        </div>
+
+        <!-- show list -->
+
+        <div class="button">
+            <input type="button" value="ORDER NOW" id="btn1">
+            <input type="button" value="CONTINUE SHOPPING" id="btn2">
+        </div>
+        <!-- 2buttons -->
+    </div>
+</body>
+
+</html>

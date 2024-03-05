@@ -3,7 +3,6 @@ import courses from "../../components/datas/Courses.js";
 import projects from "../../components/datas/Projects.js";
 import users from "../../components/datas/Users.js";
 
-
 export default function commitDatas() {
   courses.commit();
   users.forEach((user) => {
@@ -16,4 +15,5 @@ export default function commitDatas() {
     new_project.insert(project);
     new_project.commit();
   })
+
 }
