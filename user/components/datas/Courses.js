@@ -1136,7 +1136,7 @@ courses.insert({
 // node js
 courses.insert({
   info: {
-    course_id: "2",
+    course_id: 2,
     imgURL: "./assets/images/nodejs.png",
     title: "Node JS",
     aurthor: "Waiferkola",
@@ -1147,7 +1147,7 @@ courses.insert({
   lessons: [
     {
       id: 0,
-      course_id: "2",
+      course_id: 2,
       topic: "001 Introduction",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/awI7KrBAjss?si=tiSmSCg5dQktkqNG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1155,7 +1155,7 @@ courses.insert({
     },
     {
       id: 1,
-      course_id: "2",
+      course_id: 2,
       topic: "002 What is V8 Engine",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/AsZ8A5Q4D4U?si=M01wgpNpaBsEI64r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1163,7 +1163,7 @@ courses.insert({
     },
     {
       id: 2,
-      course_id: "2",
+      course_id: 2,
       topic: "002 What is V8 Engine",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/AsZ8A5Q4D4U?si=U47vnGlzrU-brVvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1171,7 +1171,7 @@ courses.insert({
     },
     {
       id: 3,
-      course_id: "2",
+      course_id: 2,
       topic: "003 Initial Requirement",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/Wj63sWR_oJY?si=xKPvwjXn1y1nMRCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1179,7 +1179,7 @@ courses.insert({
     },
     {
       id: 4,
-      course_id: "2",
+      course_id: 2,
       topic: "004 First App ",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/C2W4_KQIGc0?si=FYPFWtSIKbOJ1asB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1187,7 +1187,7 @@ courses.insert({
     },
     {
       id: 5,
-      course_id: "2",
+      course_id: 2,
       topic: "005 Global Methods",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/E3VXZ-dfVv0?si=XI2q4nb6uFiSmkSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1195,7 +1195,7 @@ courses.insert({
     },
     {
       id: 6,
-      course_id: "2",
+      course_id: 2,
       topic: "006 Function And Function Expression",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/hGva75fI3M8?si=Ceur01IGf9rFFAaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1203,7 +1203,7 @@ courses.insert({
     },
     {
       id: 7,
-      course_id: "2",
+      course_id: 2,
       topic: "007 Module Export And Import",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/kPLpPBW4JtU?si=lGQPnf3rBKCVLNDm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1211,7 +1211,7 @@ courses.insert({
     },
     {
       id: 8,
-      course_id: "2",
+      course_id: 2,
       topic: "008 Multiple Module Export",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/b4T1IZZfq4E?si=uayW1eUWoZGX5n1V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1219,7 +1219,7 @@ courses.insert({
     },
     {
       id: 9,
-      course_id: "2",
+      course_id: 2,
       topic: "009 Multiple File Export",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Yfsd6qZjk?si=StIqvUQYG1oZr1sQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1227,7 +1227,7 @@ courses.insert({
     },
     {
       id: 10,
-      course_id: "2",
+      course_id: 2,
       topic: "010 EventEmitter",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/YJWnCbQrpNc?si=_dDfSWA3JukItvG5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1235,7 +1235,7 @@ courses.insert({
     },
     {
       id: 11,
-      course_id: "2",
+      course_id: 2,
       topic: "011 EventEmitter With Parameter",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/-LAT38GW1u0?si=E4RIeFng89iLGO6T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1243,7 +1243,7 @@ courses.insert({
     },
     {
       id: 12,
-      course_id: "2",
+      course_id: 2,
       topic: "012 For Each And For Of",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/nPMgfRy7DpQ?si=Up_2tAxSo_cW2VKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1251,7 +1251,7 @@ courses.insert({
     },
     {
       id: 13,
-      course_id: "2",
+      course_id: 2,
       topic: "013 Foreach Loop",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/rkUo_GAGHD8?si=LX4Dm1akOamjEW75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1259,7 +1259,7 @@ courses.insert({
     },
     {
       id: 14,
-      course_id: "2",
+      course_id: 2,
       topic: "014 File Handling With Synchronously",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/wP68FglLCUg?si=Ub1OoNPhfaMVuH3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1267,7 +1267,7 @@ courses.insert({
     },
     {
       id: 15,
-      course_id: "2",
+      course_id: 2,
       topic: "015 File Handling Asynchronously",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/vI8T_9nCFBk?si=uiEfC6qznOa6PbHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1275,7 +1275,7 @@ courses.insert({
     },
     {
       id: 16,
-      course_id: "2",
+      course_id: 2,
       topic: "016 Deleting File And Create Directory",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/80hmNaO0E4M?si=i25ORDcCuSNkS_bu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1283,7 +1283,7 @@ courses.insert({
     },
     {
       id: 17,
-      course_id: "2",
+      course_id: 2,
       topic: "017 Buffer And Stream Explaination",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/dKr6pF1I7Lc?si=pito8saRAD2XFYPP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1291,7 +1291,7 @@ courses.insert({
     },
     {
       id: 18,
-      course_id: "2",
+      course_id: 2,
       topic: "018 Piping",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/hgvUVRrQJwg?si=Y_vx4c-K1X9s8ICd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1299,7 +1299,7 @@ courses.insert({
     },
     {
       id: 19,
-      course_id: "2",
+      course_id: 2,
       topic: "019 ReadableString",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/vjUGWm3ow4I?si=reqYj-sjcuk2mqKu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1307,7 +1307,7 @@ courses.insert({
     },
     {
       id: 20,
-      course_id: "2",
+      course_id: 2,
       topic: "020 Writeable Stream",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/IxBh1VQTbzg?si=l4ri9iyXkOdDMbK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1315,7 +1315,7 @@ courses.insert({
     },
     {
       id: 21,
-      course_id: "2",
+      course_id: 2,
       topic: "021 Client And Server Technology",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/Fuwd80Tlltg?si=h5KO297aR1o9J46H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1323,7 +1323,7 @@ courses.insert({
     },
     {
       id: 22,
-      course_id: "2",
+      course_id: 2,
       topic: "022 Creating Server",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/R1qP-P0o-FI?si=60K6iLZo3Ih-Bga4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1331,7 +1331,7 @@ courses.insert({
     },
     {
       id: 23,
-      course_id: "2",
+      course_id: 2,
       topic: "023 Server ReadableStr Piping",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/dthh56bhnxU?si=qx1ceRnxvXEBtyqt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1339,7 +1339,7 @@ courses.insert({
     },
     {
       id: 24,
-      course_id: "2",
+      course_id: 2,
       topic: "024 Serving HTML File",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/sV7a4TzbpfE?si=HlIOa6kYWDsUhO9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1347,7 +1347,7 @@ courses.insert({
     },
     {
       id: 25,
-      course_id: "2",
+      course_id: 2,
       topic: "025 Serving JSON Data",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/icaEnN-Cyqo?si=ueMdgiI5137P3szw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1355,7 +1355,7 @@ courses.insert({
     },
     {
       id: 26,
-      course_id: "2",
+      course_id: 2,
       topic: "026 Basic Routing",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/IuXHI3vlrug?si=xlOwVs2RKTyj38d5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1363,7 +1363,7 @@ courses.insert({
     },
     {
       id: 27,
-      course_id: "2",
+      course_id: 2,
       topic: "027 PackageJSON Creating",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/26OfOBqlWJk?si=_YfRe5lmG6jeaGxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1371,7 +1371,7 @@ courses.insert({
     },
     {
       id: 28,
-      course_id: "2",
+      course_id: 2,
       topic: "028 Installation Express",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/MqjInNerLtw?si=VCACAJ8rEImMeGDn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1379,7 +1379,7 @@ courses.insert({
     },
     {
       id: 29,
-      course_id: "2",
+      course_id: 2,
       topic: "029 Nodemon Installation And Usage",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/QOisMkZCgrw?si=8H636lfCuXxLCs0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1387,7 +1387,7 @@ courses.insert({
     },
     {
       id: 30,
-      course_id: "2",
+      course_id: 2,
       topic: "  030 Using Express ",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/OpkIFXJ0LYw?si=iaZakzmxjGHrn6Ya" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1395,7 +1395,7 @@ courses.insert({
     },
     {
       id: 31,
-      course_id: "2",
+      course_id: 2,
       topic: "31 REPL",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/ryJUcB_N_mE?si=EX6HUpcI4HwB4svi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1403,7 +1403,7 @@ courses.insert({
     },
     {
       id: 32,
-      course_id: "2",
+      course_id: 2,
       topic: "32 Starting Server",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/fJ0WB66g2fI?si=7RshlCcjrtfDz1j7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1411,7 +1411,7 @@ courses.insert({
     },
     {
       id: 33,
-      course_id: "2",
+      course_id: 2,
       topic: "33 Get Or Post",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/ND1EAqPhwDo?si=yol_KJSB-v1lMDgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1419,7 +1419,7 @@ courses.insert({
     },
     {
       id: 34,
-      course_id: "2",
+      course_id: 2,
       topic: "34 Request Path",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/TDhVyeBpjU0?si=U5YYUHdPAHAqR8__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1427,7 +1427,7 @@ courses.insert({
     },
     {
       id: 35,
-      course_id: "2",
+      course_id: 2,
       topic: "35 Custom Router",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ud4IURQQjmw?si=OJ2LnXdWPyhAnXBa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1435,7 +1435,7 @@ courses.insert({
     },
     {
       id: 36,
-      course_id: "2",
+      course_id: 2,
       topic: "36 Undefined Route Handling",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/gu8lDNRYV7o?si=fu3H33gvTZ4Zq67k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1443,7 +1443,7 @@ courses.insert({
     },
     {
       id: 37,
-      course_id: "2",
+      course_id: 2,
       topic: "37 Dot Env Usage",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/MZ8GRIlhLaI?si=SjQbN5VOEwdm-6Rf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1451,7 +1451,7 @@ courses.insert({
     },
     {
       id: 38,
-      course_id: "2",
+      course_id: 2,
       topic: "38 GitHub Project",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/T9dGwFZTGNg?si=tRtTQqOVdG1I_waf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1459,7 +1459,7 @@ courses.insert({
     },
     {
       id: 39,
-      course_id: "2",
+      course_id: 2,
       topic: "39 Getting Post URLEncoded Values",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/7TSsmneFoXY?si=BXr7QyiWgCl42cXP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
@@ -1467,7 +1467,7 @@ courses.insert({
     },
     {
       id: 40,
-      course_id: "2",
+      course_id: 2,
       topic: "39 Getting Post URLEncoded Values",
       videoURL:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/wLw_t1PUnSM?si=gkiYHXnA_NFcqzE7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
