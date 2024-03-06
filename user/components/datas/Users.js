@@ -77,6 +77,32 @@ let users = [
     my_schedules: [],
     finished_quiz: [],
   },
+  {
+    info: {
+      username: "Phyoe Pyaw Maung",
+      email: "phyoepyaemaung@audrey.tulip",
+      password: "password",
+      profile: "./assets/images/phyoepyaemg.jpg",
+      agreeNoti: "on",
+    },
+    progress_course: [],
+    finished_lessons: [],
+    my_schedules: [],
+    finished_quiz: [],
+  },
+  {
+    info: {
+      username: "Nyan Lin Soe",
+      email: "nyanlinsoe@audrey.tulip",
+      password: "password",
+      profile: "./assets/images/nyanlinsoe.jpg",
+      agreeNoti: "on",
+    },
+    progress_course: [],
+    finished_lessons: [],
+    my_schedules: [],
+    finished_quiz: [],
+  },
 ];
 
 export default users;

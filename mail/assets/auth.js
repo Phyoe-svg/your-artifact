@@ -25,6 +25,11 @@ mail.addEventListener("input", (e) => {
       same.innerText = "";
       correct_mail = true;
     }
+    if( Number(mail.value[0]) >= 0){
+      same.style.color = "red";
+      same.innerText = "Email must start with character";
+      correct_mail = false;
+    }
   });
 
   if (!mail.value.endsWith("@audrey.tulip")) {
@@ -32,19 +37,30 @@ mail.addEventListener("input", (e) => {
     same.innerText = "must end with @audrey.tulip";
   }
 });
+const pass_error = document.getElementById("pass-error");
+password.addEventListener("input", ()=>{
+  if( password.value.length < 8 ){
+    pass_error.style.color = "red";
+    pass_error.innerHTML = "Password must me greater than 8";
+    signup.disabled = false;
+  }else{
+    pass_error.innerHTML = "";
+  }
+})
 
 re_password.addEventListener("input", (e) => {
   if (re_password.value === password.value) {
     password_match.style.color = "green";
     password_match.innerHTML = "Ok";
-    console.log(correct_mail);
     if (correct_mail) {
       signup.disabled = false;
     }
+    signup.disabled = false;
     // console.log(signup_datas)
   } else {
     password_match.style.color = "red";
     password_match.innerHTML = "Not match";
+    signup.disabled = true;
   }
 });
 
