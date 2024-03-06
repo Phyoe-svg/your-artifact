@@ -2,7 +2,7 @@ let users = [
   {
     info: {
       username: "Domak",
-      email: "domak@gmail.com",
+      email: "domak@audrey.tulip",
       password: "password",
       profile: "./assets/icons/94a65614997aeace.jfif",
       agreeNoti: "on",
@@ -15,7 +15,7 @@ let users = [
   {
     info: {
       username: "Kyaw Thura",
-      email: "kyawthura@gmail.com",
+      email: "kyawthura@audrey.tulip",
       password: "password",
       profile: "./assets/icons/94a65614997aeace.jfif",
       agreeNoti: "on",
@@ -28,7 +28,7 @@ let users = [
   {
     info: {
       username: "Thiha Naing",
-      email: "thihanaing@gmail.com",
+      email: "thihanaing@audrey.tulip",
       password: "password",
       profile: "./assets/icons/94a65614997aeace.jfif",
       agreeNoti: "on",
@@ -41,7 +41,7 @@ let users = [
   {
     info: {
       username: "Hla Moe Oo",
-      email: "hlamoeoo@gmail.com",
+      email: "hlamoeoo@audrey.tulip",
       password: "password",
       profile: "./assets/icons/94a65614997aeace.jfif",
       agreeNoti: "on",
@@ -54,7 +54,7 @@ let users = [
   {
     info: {
       username: "Zaw Zay Shine",
-      email: "zawzayshine@gmail.com",
+      email: "zawzayshine@audrey.tulip",
       password: "password",
       profile: "./assets/icons/94a65614997aeace.jfif",
       agreeNoti: "on",
@@ -67,9 +67,9 @@ let users = [
   {
     info: {
       username: "Zaw Lin Naing",
-      email: "zawlinnaing@gmail.com",
+      email: "zawlinnaing@audrey.tulip",
       password: "password",
-      profile: "./assets/icons/94a65614997aeace.jfif",
+      profile: "./assets/images/zawlinnaing.jpg",
       agreeNoti: "on",
     },
     progress_course: [],

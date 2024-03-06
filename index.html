@@ -1,16 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <!-- this template will redirect to user -->
-    <script>
-        window.onload = ()=>{
-            window.location.href = "/user";
+    <style>
+        * {
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-    </script>
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url("./user/assets/images/back.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .container :where(.header, .about, .instruction) {
+            margin: 10px;
+        }
+
+        .container .header h1 {
+            width: fit-content;
+            font-size: 1.5em;
+            color: rgb(208, 249, 252);
+        }
+
+        .container .about {
+            width: 70%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.195);
+            padding: 50px;
+        }
+
+        .container .instruction {
+            width: 80%;
+            padding: 50px;
+            color: white;
+            font-family: monospace;
+            font-weight: bold;
+            background-color: rgba(47, 36, 17, 0.577);
+        }
+
+        .instruction a{
+            color: white;
+        }
+
+        .instruction:hover {
+            background-color: black;
+        }
+        .container .nav{
+            margin: auto;
+            position: relative;
+            top: 50px;
+            width: fit-content;
+        }
+
+        .nav a{
+            background-color: rgb(16, 15, 15);
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .nav a:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WELCOME FROM YOUR-ARTIFACT</h1>
+        </div>
+        <div class="about">
+            Your-Artifact is a platform focus on learning programming courses and management on users' progress.
+            <div class="nav"><a href="/user">Start Your Journy</a></div>
+        </div>
+        <div class="instruction">
+            <h4>Attention</h4>
+            Before start using our platform, you must create a mail from our custom mail system named "<a
+                href="/mail">@audrey.tulip</a>". You can also sign up with your desire email address but we won't handle
+            the responsibility related with forget password except <a href="/mail">@audrey.tulip</a>.
+            <div class="option"><a href="/mail">Click here</a> to sign up your mail for our platform.</div>
+        </div>
+        
+    </div>
 </body>
+
 </html>
